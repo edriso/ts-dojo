@@ -1,4 +1,6 @@
-# Topic 13 - Decorators
+# Scroll 13 - Decorators
+
+> *The hidden glyphs that power NestJS.*
 
 Decorators are special functions that attach metadata or behavior to classes, methods,
 properties, and parameters. They look like `@Something` and appear above the code they
@@ -151,19 +153,19 @@ export class TasksController {
 
 ---
 
-## Tasks
+## Katas
 
 These tasks are mostly backend-focused since decorators are mainly used in NestJS.
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Class decorator**
+**Kata 1 - Class decorator**
 Write a decorator `@Singleton` that stores the class in a registry and throws an error
 if you try to register the same class name twice.
 Apply it to two different classes.
 Try applying it to the same class name twice and see the error.
 
-**Task 2 - Method decorator for timing**
+**Kata 2 - Method decorator for timing**
 Write a decorator `@Measure` that:
 - Records the time before the method runs
 - Runs the method
@@ -172,7 +174,7 @@ Write a decorator `@Measure` that:
 
 Apply it to a function that does some heavy work (use a loop to simulate it).
 
-**Task 3 - Decorator factory with a role check**
+**Kata 3 - Decorator factory with a role check**
 Write a decorator factory `@RequireRole(role: string)` that:
 - Wraps the method
 - Checks if `this.currentUserRole` equals the required role
@@ -181,18 +183,18 @@ Write a decorator factory `@RequireRole(role: string)` that:
 
 Apply it to a method in a fake `TasksController` class.
 
-**Task 4 - Property decorator for validation**
+**Kata 4 - Property decorator for validation**
 Write a decorator `@MinLength(min: number)` that stores the minimum length requirement
 in metadata on the class. For now, just log the property name and minimum length.
 (Full validation frameworks like class-validator work this way.)
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 5 - Build a mini NestJS-like framework (for fun)**
+**Kata 5 - Build a mini NestJS-like framework (for fun)**
 Write simple versions of NestJS decorators from scratch:
 - `@Controller(path)` - stores the path on the class
 - `@Get(path?)` - stores the handler method info
@@ -203,7 +205,7 @@ and returns an array of route definitions: `{ method: string; path: string; hand
 
 This gives you a deep understanding of how NestJS works under the hood.
 
-**Task 6 - Real NestJS decorators**
+**Kata 6 - Real NestJS decorators**
 In your actual NestJS project (`project/server/`), make sure you have:
 - A `TasksController` using `@Controller`, `@Get`, `@Post`, `@Put`, `@Delete`
 - A `TasksService` using `@Injectable`
@@ -213,7 +215,7 @@ Read the NestJS docs if needed: https://docs.nestjs.com/controllers
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Backend - Finish the NestJS tasks module:**
 

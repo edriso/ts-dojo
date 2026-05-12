@@ -1,26 +1,26 @@
-// Topic 13 - Decorators
-// Backend (NestJS / Node.js) Exercises
+// Scroll 13 - Decorators
+// Backend dojo · NestJS + Node katas
 //
 // Make sure your tsconfig.json has:
 //   "experimentalDecorators": true
 //   "emitDecoratorMetadata": true
 
 // ------------------------------------------------------------------
-// Task 1 - Class decorator (singleton registry)
+// Kata 1 - Class decorator (singleton registry)
 // ------------------------------------------------------------------
-// TODO: Write a decorator function Injectable(target: Function): void
+// Your mission: Write a decorator function Injectable(target: Function): void
 // that logs "Registered: " + target.name when applied.
 //
 // Apply it to two stub classes: TasksService and UsersService.
 // Log something after defining each class to confirm the decorator ran.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 2 - Method decorator for timing
+// Kata 2 - Method decorator for timing
 // ------------------------------------------------------------------
-// TODO: Write a decorator @Measure that:
+// Your mission: Write a decorator @Measure that:
 //   1. Before calling the method: record Date.now()
 //   2. Calls the original method with the same arguments
 //   3. After the call: records Date.now() again
@@ -33,13 +33,13 @@
 // Apply it to a method that does a slow loop (loop 1 million times doing nothing).
 // Log the timing output.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 3 - Decorator factory with role check
+// Kata 3 - Decorator factory with role check
 // ------------------------------------------------------------------
-// TODO: Write a decorator factory:
+// Your mission: Write a decorator factory:
 //   function RequireRole(role: string) {
 //     return function(target: any, key: string, descriptor: PropertyDescriptor) { ... }
 //   }
@@ -56,13 +56,13 @@
 // Test both: set currentUserRole to "admin" and call deleteTask (should work).
 // Then set it to "user" and call deleteTask (should throw).
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 5 - Mini NestJS-like route registry
+// Kata 5 - Mini NestJS-like route registry
 // ------------------------------------------------------------------
-// TODO: Build a simple route registry using decorators.
+// Your mission: Build a simple route registry using decorators.
 //
 // Step 1: Create a simple metadata store (just an object):
 //   const routeRegistry: Record<string, { method: string; path: string; handlerName: string }[]> = {}
@@ -85,4 +85,4 @@
 //   }
 //   console.log(getRoutes(TasksController));
 
-// Write your solution here:
+// Train your code here, ninja:

@@ -1,10 +1,10 @@
-// Topic 06 - Enums
-// Backend (NestJS / Node.js) Exercises
+// Scroll 06 - Enums
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 9 - Role-based permissions with enum
+// Kata 9 - Role-based permissions with enum
 // ------------------------------------------------------------------
-// TODO: Create a string enum UserRole:
+// Your mission: Create a string enum UserRole:
 //   Admin = "admin"
 //   User = "user"
 //
@@ -17,13 +17,13 @@
 //
 // Test with all combinations and log the results.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - HTTP status enum in responses
+// Kata 10 - HTTP status enum in responses
 // ------------------------------------------------------------------
-// TODO: Create a numeric enum HttpStatus:
+// Your mission: Create a numeric enum HttpStatus:
 //   OK = 200
 //   Created = 201
 //   BadRequest = 400
@@ -38,13 +38,13 @@
 //   1. sendResponse(HttpStatus.OK, { id: 1, title: "Build app" })
 //   2. sendResponse(HttpStatus.NotFound, null)
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Enum in validation
 // ------------------------------------------------------------------
-// TODO: Create a string enum TaskStatus:
+// Your mission: Create a string enum TaskStatus:
 //   Todo = "todo"
 //   InProgress = "in_progress"
 //   Done = "done"
@@ -55,4 +55,4 @@
 //
 // This is a preview of type guards (topic 08). Try to understand it.
 
-// Write your solution here:
+// Train your code here, ninja:

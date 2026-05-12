@@ -1,10 +1,10 @@
-// Topic 02 - Everyday Types
-// Backend (NestJS / Node.js) Exercises
+// Scroll 02 - Everyday Types
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 10 - Request body types
+// Kata 10 - Request body types
 // ------------------------------------------------------------------
-// TODO: These variables simulate a raw incoming request body.
+// Your mission: These variables simulate a raw incoming request body.
 // Type them as unknown because you cannot trust user input.
 // Then write type checks (using typeof) to safely use them.
 //
@@ -15,13 +15,13 @@
 //   - Check rawTitle is a string, then log it in uppercase
 //   - Check rawPriority is a string, then log "Priority is: " + rawPriority
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 11 - Status handler
+// Kata 11 - Status handler
 // ------------------------------------------------------------------
-// TODO: Write a function handleTaskStatus(status: string): void
+// Your mission: Write a function handleTaskStatus(status: string): void
 // that logs a different message for each valid status:
 //   - "todo"        -> log "Task is waiting to be started"
 //   - "in_progress" -> log "Task is currently being worked on"
@@ -30,17 +30,17 @@
 //
 // Then call it three times with each valid status.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - void vs never
 // ------------------------------------------------------------------
-// TODO: Write two functions:
+// Your mission: Write two functions:
 //   1. logRequest(url: string): void - logs "Incoming request: " + url
 //   2. crashServer(reason: string): never - throws new Error(reason)
 //
 // Call logRequest with a URL string.
 // Do NOT call crashServer (it will crash the process!), just define it.
 
-// Write your solution here:
+// Train your code here, ninja:

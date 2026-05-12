@@ -1,4 +1,6 @@
-# Topic 06 - Enums
+# Scroll 06 - Enums
+
+> *Name your constants. No more typo traps in the dojo.*
 
 Enums (short for enumerations) are a way to give friendly names to a set of related values.
 They are like a list of named constants. Instead of writing `"in_progress"` everywhere and hoping
@@ -108,17 +110,17 @@ Use union types when you just need to constrain a parameter.
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Basic string enum**
+**Kata 1 - Basic string enum**
 Create a string enum `TaskStatus` with three values: `Todo`, `InProgress`, `Done`.
 Map each to a lowercase string: `"todo"`, `"in_progress"`, `"done"`.
 Write a function `getStatusLabel(status: TaskStatus): string` that returns a human-friendly label
 like "To Do", "In Progress", "Done".
 
-**Task 2 - Numeric enum with HTTP status codes**
+**Kata 2 - Numeric enum with HTTP status codes**
 Create a numeric enum `HttpStatus` with:
 - `OK = 200`
 - `Created = 201`
@@ -130,7 +132,7 @@ Create a numeric enum `HttpStatus` with:
 
 Write a function `isSuccess(status: HttpStatus): boolean` that returns true for 200 and 201.
 
-**Task 3 - Const enum**
+**Kata 3 - Const enum**
 Create a `const enum` called `Limit` with:
 - `MaxTasksPerUser = 100`
 - `MaxTitleLength = 255`
@@ -140,30 +142,30 @@ Write a function `validateTitle(title: string): boolean` that returns true if th
 is within the `MaxTitleLength` limit. Compile the code and look at the output - notice the const
 enum values are inlined directly.
 
-**Task 4 - Enum in an object**
+**Kata 4 - Enum in an object**
 Create a `Priority` string enum: `Low = "low"`, `Medium = "medium"`, `High = "high"`.
 Write a function `createTask(title: string, priority: Priority)` that returns a task object.
 Try calling it with `"low"` directly (a string) instead of `Priority.Low`.
 Notice the error. Then fix it.
 
-**Task 5 - Iterating over an enum**
+**Kata 5 - Iterating over an enum**
 Create a numeric enum `Role` with: `Admin = 1`, `Editor = 2`, `Viewer = 3`.
 Write code that logs all the enum keys and values using `Object.keys` and `Object.values`.
 (Note: numeric enums create reverse mappings, so you will see extra entries. Filter them out
 by checking `isNaN(Number(key))`.)
 
-**Task 6 - Enum vs union comparison**
-Take the `TaskStatus` enum from Task 1 and write the equivalent as a union type.
+**Kata 6 - Enum vs union comparison**
+Take the `TaskStatus` enum from Kata 1 and write the equivalent as a union type.
 Then write the same `getStatusLabel` function using the union type version.
 Compare both approaches and write a comment on which you prefer and why.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Enum for filter state**
+**Kata 7 - Enum for filter state**
 In a frontend task list, you might filter by status. Create a `FilterOption` enum:
 - `All = "all"`
 - `Active = "todo"`
@@ -173,7 +175,7 @@ In a frontend task list, you might filter by status. Create a `FilterOption` enu
 Write a function `applyFilter(tasks: { status: string }[], filter: FilterOption)` that returns
 only the tasks matching the filter (or all tasks if `FilterOption.All`).
 
-**Task 8 - Enum in component state**
+**Kata 8 - Enum in component state**
 Write an enum `ModalState` with: `Closed = "closed"`, `CreateTask = "create"`, `EditTask = "edit"`, `DeleteTask = "delete"`.
 Declare a variable `currentModal: ModalState` set to `ModalState.Closed`.
 Write a function `openModal(modal: ModalState): void` that changes `currentModal` and logs it.
@@ -181,23 +183,23 @@ Call it with `ModalState.CreateTask`.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - Enum in service logic**
+**Kata 9 - Enum in service logic**
 Create a `UserRole` string enum: `Admin = "admin"`, `User = "user"`.
 Write a function `hasPermission(role: UserRole, action: "delete" | "edit" | "view"): boolean`.
 Only admins can delete. Admins and users can edit and view.
 
-**Task 10 - HTTP status enum in responses**
-Use the `HttpStatus` enum from Task 2. Write a function `sendResponse(statusCode: HttpStatus, data: unknown)`
+**Kata 10 - HTTP status enum in responses**
+Use the `HttpStatus` enum from Kata 2. Write a function `sendResponse(statusCode: HttpStatus, data: unknown)`
 that logs a formatted response object: `{ status: statusCode, body: data }`.
 Call it with `HttpStatus.OK` and a fake task, and with `HttpStatus.NotFound` and null.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Replace plain string unions with proper enums for things that need to be shared:

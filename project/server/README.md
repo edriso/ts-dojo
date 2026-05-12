@@ -1,21 +1,25 @@
-# Backend - NestJS + TypeScript
+# Backend Dojo: NestJS + TypeScript
 
-This is the backend for the Task Manager app.
+This is the backend side of the Task Manager. You are the NestJS ninja. Your
+weapon is decorators, your shield is dependency injection, and your secret
+scrolls live in `../shared/`.
 
 ---
 
-## Setup
+## Set Up Your Gear
 
 ```bash
 npm install -g @nestjs/cli
 nest new .
 ```
 
+When NestJS asks which package manager, pick whichever you like.
+
 ---
 
-## Path Alias for Shared Types
+## Wire Up the Shared Scroll Path
 
-Add to `tsconfig.json`:
+Add this to `tsconfig.json`:
 
 ```json
 {
@@ -27,9 +31,15 @@ Add to `tsconfig.json`:
 }
 ```
 
+Now you can write:
+
+```ts
+import type { Task, CreateTaskDto } from "@shared/index";
+```
+
 ---
 
-## Key Files to Create
+## Suggested Layout
 
 ```
 src/
@@ -50,29 +60,27 @@ src/
     auth.service.ts
     auth.module.ts
   types/
-    express.d.ts    <- module augmentation for req.user
+    express.d.ts        <- module augmentation for req.user
   app.module.ts
   main.ts
 ```
 
 ---
 
-## Running the Server
+## Running the Dojo Server
 
 ```bash
-npm run start:dev   # development with hot reload
-npm run build       # production build
-npm run start:prod  # run production build
+npm run start:dev      # development with hot reload (your daily mode)
+npm run build          # production build
+npm run start:prod     # run the built app
 ```
 
 ---
 
-## Testing the API
-
-Test your endpoints with curl:
+## Test Your Moves with curl
 
 ```bash
-# Get all tasks
+# List all tasks
 curl http://localhost:3000/tasks
 
 # Create a task
@@ -91,6 +99,7 @@ curl -X DELETE http://localhost:3000/tasks/1
 
 ---
 
-## Features to Build
+## What to Build Next
 
-Check the `project/README.md` for the full feature checklist tied to each topic.
+Check `project/README.md` for the full mission checklist tied to each scroll.
+One scroll, one feature, one quiet win.

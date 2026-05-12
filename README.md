@@ -1,46 +1,65 @@
-# TypeScript Ninja Path
-
-Welcome! This is a hands-on learning repo for two friends learning TypeScript together.
-
-One of you is building the **frontend** using React with TypeScript.
-The other is building the **backend** using NestJS with TypeScript.
-
-You will learn every important TypeScript concept by doing real tasks, and you will apply each concept directly to a shared project: a **Task Manager app**.
-
----
-
-## The Project
-
-You are building a Task Manager app together.
-
-- Users can sign up and log in
-- Users can create, update, and delete tasks
-- Each task has a title, description, status, and due date
-- The frontend talks to the backend through a typed API
-
-This project grows with you. After each topic, there is a section called "Apply to the Project" that tells you exactly what to build using what you just learned.
-
----
-
-## Tech Stack
-
-| Side | Technology |
-|------|-----------|
-| Frontend | React 18 + Vite + TypeScript |
-| Backend | NestJS + TypeScript |
-| Shared Types | Plain TypeScript files imported by both sides |
-
----
-
-## Folder Structure
+# The TypeScript Dojo
 
 ```
-ts-ninja/
-  README.md                     <- you are here
-  01-basics/                    <- topic 1
-    README.md                   <- explanation + tasks
-    client/exercise.ts          <- frontend exercises
-    server/exercise.ts          <- backend exercises
+        /\
+       /  \
+      / /\ \      Welcome, young ninja.
+     / /  \ \     Step into the dojo.
+     \ \  / /     Train your types.
+      \ \/ /      Earn your belt.
+       \  /
+        \/
+```
+
+You just walked into the **TypeScript Dojo**. Inside these walls, two ninjas
+train side by side. One trains in the way of the **frontend** (React with
+TypeScript). The other trains in the way of the **backend** (NestJS with
+TypeScript). Together you build one real app: a **Task Manager**.
+
+Each chapter of the dojo teaches you one piece of the TypeScript art. You read
+the scroll, you do the katas (small drills), and then you bring what you
+learned into the real project. Slow, steady, and fun.
+
+No fancy words. No scary jargon. Just one ninja learning one move at a time.
+
+---
+
+## The Mission
+
+You and your training partner are building a Task Manager app.
+
+- Ninjas can sign up and log in
+- Ninjas can create, update, and delete tasks
+- Each task has a title, a description, a status, and a due date
+- The frontend talks to the backend through a fully typed API
+
+This is your dojo project. It grows with you. After every chapter, the README
+shows you exactly what new feature to add using the move you just learned.
+
+---
+
+## Tech the Ninjas Use
+
+| Side | Weapon |
+|------|--------|
+| Frontend | React 18 + Vite + TypeScript |
+| Backend | NestJS + TypeScript |
+| Shared Types | Plain TypeScript files used by both sides |
+
+Sharing types between frontend and backend is the dojo's secret power. Change
+a type on one side, the other side instantly tells you what broke.
+
+---
+
+## The Map of the Dojo
+
+```
+ts-dojo/
+  README.md                          <- you are here
+  01-basics/                         <- Scroll 01
+    README.md                        <- the scroll: what to read and do
+    client/exercise.ts               <- frontend kata file
+    server/exercise.ts               <- backend kata file
   02-everyday-types/
   03-type-aliases-and-interfaces/
   04-unions-intersections-literals/
@@ -56,80 +75,85 @@ ts-ninja/
   14-advanced-patterns/
   15-config-and-tooling/
   project/
-    client/                     <- React + TS app (Vite)
-    server/                     <- NestJS app
-    shared/                     <- types used by both sides
+    client/                          <- React + TS app (Vite)
+    server/                          <- NestJS app
+    shared/                          <- types both sides use
 ```
 
 ---
 
-## Learning Path
+## The Belt Path
 
-Work through the topics in order. Each topic builds on the previous one.
+Train through the scrolls in order. Each one builds on the last. As you
+finish them, you climb the ranks of the dojo.
 
-| # | Topic | What You Learn |
-|---|-------|---------------|
-| 01 | Basics and Setup | What TypeScript is, how to set it up, tsconfig |
-| 02 | Everyday Types | All the basic types you will use every day |
-| 03 | Type Aliases and Interfaces | How to define and reuse custom types |
-| 04 | Unions, Intersections, Literals | Combining types in powerful ways |
-| 05 | Functions | Typing functions properly |
-| 06 | Enums | Named constants for things like status and roles |
-| 07 | Objects and Classes | Object shapes, OOP in TypeScript |
-| 08 | Narrowing and Type Guards | Making TypeScript smart about unknown types |
-| 09 | Generics | Writing reusable code that works with any type |
-| 10 | Type Manipulation | Creating new types from existing ones |
-| 11 | Utility Types | Built-in helpers like Partial, Pick, Omit |
-| 12 | Modules and Declarations | Organizing types across files |
-| 13 | Decorators | The engine behind NestJS |
-| 14 | Advanced Patterns | Satisfies, branded types, recursive types |
-| 15 | Config and Tooling | Mastering tsconfig and the TypeScript compiler |
+| Scroll | Topic | What You Learn | Belt |
+|--------|-------|---------------|------|
+| 01 | Basics and Setup | What TypeScript is, how to set it up, tsconfig | White |
+| 02 | Everyday Types | The basic types you will use every day | White |
+| 03 | Type Aliases and Interfaces | Defining and reusing your own types | White |
+| 04 | Unions, Intersections, Literals | Mixing types like a master | Yellow |
+| 05 | Functions | Typing functions the right way | Yellow |
+| 06 | Enums | Named constants for status, roles, and more | Yellow |
+| 07 | Objects and Classes | Shapes and OOP, the NestJS way | Orange |
+| 08 | Narrowing and Type Guards | Teach TypeScript to read your mind | Orange |
+| 09 | Generics | Reusable code that works with any type | Green |
+| 10 | Type Manipulation | Build new types from old ones | Green |
+| 11 | Utility Types | Partial, Pick, Omit, and friends | Blue |
+| 12 | Modules and Declarations | Organize types across many files | Blue |
+| 13 | Decorators | The magic behind NestJS | Purple |
+| 14 | Advanced Patterns | satisfies, branded types, recursive types | Brown |
+| 15 | Config and Tooling | Master tsconfig and the compiler | Black |
+
+Reach Black Belt and the Task Manager is yours.
 
 ---
 
-## How to Use This Repo
+## How to Train in the Dojo
 
-1. Go into a topic folder, e.g. `01-basics/`
-2. Read the `README.md` in that folder
-3. Open the `client/exercise.ts` or `server/exercise.ts` file
-4. Complete the TODO items in the file
-5. Run your code with `npx ts-node <path>/exercise.ts`, or type-check the repo with `npm run type-check`
-6. Once you finish all tasks, go to the "Apply to the Project" section in the README
-7. Build that feature in the `project/` folder
+1. Step into a scroll folder, for example `01-basics/`
+2. Read its `README.md` from top to bottom
+3. Open `client/exercise.ts` or `server/exercise.ts`
+4. Do the katas (the TODO blocks). Take your time
+5. Run your code with `npx ts-node <path>/exercise.ts`, or type-check the whole
+   dojo at once with `npm run type-check`
+6. When you finish, head to the "Bring it to the Project" section in the scroll
+7. Build that feature inside the `project/` folder
+8. Take a breath. Move to the next scroll. Repeat
 
 ---
 
 ## Prerequisites
 
-- Basic JavaScript knowledge (variables, functions, arrays, objects, promises)
-- Node.js installed (v18 or later recommended)
-- A code editor (VS Code is highly recommended for TypeScript)
+- A little JavaScript (variables, functions, arrays, objects, promises)
+- Node.js v18 or later
+- VS Code (the dojo's favorite editor for TypeScript)
 
-### Install TypeScript locally (recommended)
+### Set up your training gear
 
-From the repo root:
+From the dojo root:
 
 ```bash
 npm install
 ```
 
-This pulls in `typescript`, `ts-node`, and `@types/node` as dev dependencies so
-every exercise file is runnable without touching your global Node setup.
+That pulls in `typescript`, `ts-node`, and `@types/node` as dev dependencies.
+No global install needed.
 
-### Check it works
+### Check your gear
 
 ```bash
 npx tsc --version
 npx ts-node --version
 ```
 
-### Run a single exercise
+### Run a single kata file
 
 ```bash
 npx ts-node 02-everyday-types/client/exercise.ts
 ```
 
-### Type-check everything in the repo
+### Type-check the whole dojo
 
 ```bash
 npm run type-check
@@ -137,17 +161,21 @@ npm run type-check
 
 ---
 
-## Shared Types
+## Shared Scrolls (the `shared/` folder)
 
-The `project/shared/` folder holds TypeScript types that both the frontend and backend use.
-This is one of the biggest benefits of using TypeScript on both sides: if you change a type in one place,
-the other side immediately shows a type error if it breaks.
+The `project/shared/` folder holds the types that both ninjas use. This is the
+secret of the dojo: write a type once, both sides obey it. Change it on one
+side, the other side instantly knows. No more arguing about API shapes.
 
 ---
 
-## Tips
+## Dojo Wisdom
 
-- Do not skip exercises even if they seem simple. Simple exercises build muscle memory.
-- Read error messages carefully. TypeScript errors are very descriptive once you learn to read them.
-- Use VS Code. The TypeScript integration in VS Code is the best in any editor.
-- When stuck, check the official docs at https://www.typescriptlang.org/docs/handbook/intro.html
+- Do not skip a kata because it looks easy. Easy katas build the muscle.
+- Read error messages slowly. TypeScript almost always tells you the answer.
+- Hover over variables in VS Code. Half of TypeScript is just reading what it
+  already knows.
+- Stuck? Visit the official scrolls at https://www.typescriptlang.org/docs/handbook/intro.html
+- A ninja who trains every day beats a ninja who trains once. Small reps win.
+
+Tighten your belt, ninja. Open Scroll 01. Begin.

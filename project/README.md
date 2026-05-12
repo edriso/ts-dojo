@@ -1,29 +1,31 @@
-# Task Manager Project
+# The Task Manager (Dojo Project)
 
-This is the shared project you build together as you progress through the topics.
-One person builds the frontend (React + TypeScript, scaffolded with Vite), the
-other builds the backend (NestJS + TypeScript). You share types through the
-`shared/` folder.
+This is the real app you build together inside the dojo. One ninja takes the
+**frontend** path (React + Vite + TypeScript). The other takes the **backend**
+path (NestJS + TypeScript). You share types through the `shared/` folder.
+
+Think of this folder as your dojo's training ground. Every scroll you finish
+adds one more move to this app.
 
 ---
 
-## Project Structure
+## Project Layout
 
 ```
 project/
-  shared/         <- TypeScript types used by both frontend and backend
+  shared/         <- types both ninjas use
     index.ts
-  client/         <- Frontend (React + Vite + TypeScript)
-    README.md     <- Setup instructions
-  server/         <- Backend (NestJS + TypeScript)
-    README.md     <- Setup instructions
+  client/         <- frontend (React + Vite + TypeScript)
+    README.md     <- frontend setup scroll
+  server/         <- backend (NestJS + TypeScript)
+    README.md     <- backend setup scroll
 ```
 
 ---
 
-## How to Get Started
+## First Day at the Dojo
 
-### Step 1 - Set up the backend (your friend does this)
+### Step 1: Backend ninja sets up the server
 
 ```bash
 cd project/server
@@ -31,25 +33,25 @@ npm install -g @nestjs/cli
 nest new .
 ```
 
-### Step 2 - Set up the frontend (you do this)
+### Step 2: Frontend ninja sets up the client
 
 ```bash
 cd project/client
 npm create vite@latest . -- --template react-ts
 npm install
-# Recommended extras:
 npm install react-router-dom zustand
 ```
 
-- `react-router-dom` — routing
-- `zustand` — small, typed state store
+- `react-router-dom` for routing
+- `zustand` for a small, typed state store
 
-### Step 3 - Install shared types
+### Step 3: Connect the shared types path alias
 
-Since `shared/` is a local TypeScript folder, both sides will import from it directly
-using a path alias configured in their `tsconfig.json`.
+Since `shared/` is a local TypeScript folder, both sides import from it
+directly using a path alias in their `tsconfig.json`.
 
-**In project/server/tsconfig.json**, add:
+**In `project/server/tsconfig.json`** add:
+
 ```json
 {
   "compilerOptions": {
@@ -60,87 +62,91 @@ using a path alias configured in their `tsconfig.json`.
 }
 ```
 
-**In project/client/tsconfig.json** (or tsconfig.app.json), add:
+**In `project/client/tsconfig.json`** (or `tsconfig.app.json`) add:
+
 ```json
 {
   "compilerOptions": {
     "paths": {
-      "@shared/*": ["../shared/*"]
+      "@shared/*": ["../shared/*"],
+      "@/*": ["./src/*"]
     }
   }
 }
 ```
+
+Now both sides can write `import type { Task } from "@shared/index"`.
 
 ---
 
-## What to Build (Feature Checklist)
+## The Mission Checklist
 
-Work through these features as you progress through the topics.
+Tick these boxes as you finish each scroll. Treat it as your belt progress.
 
-### After Topic 2 (Everyday Types)
-- [ ] Backend: Basic NestJS setup running on port 3000
+### After Scroll 02 (Everyday Types)
+- [ ] Backend: basic NestJS app running on port 3000
 - [ ] Frontend: React app running with TypeScript
-- [ ] Shared: Basic Task and User interfaces in shared/index.ts
+- [ ] Shared: basic `Task` and `User` interfaces in `shared/index.ts`
 
-### After Topic 5 (Functions)
-- [ ] Backend: GET /tasks - returns hardcoded tasks array
-- [ ] Backend: GET /tasks/:id - returns a single task
-- [ ] Frontend: Fetch and display tasks list
+### After Scroll 05 (Functions)
+- [ ] Backend: `GET /tasks` returns a hardcoded array
+- [ ] Backend: `GET /tasks/:id` returns one task
+- [ ] Frontend: fetch and display the task list
 
-### After Topic 7 (Classes)
-- [ ] Backend: TasksService class with in-memory storage
-- [ ] Backend: POST /tasks - creates a new task
-- [ ] Frontend: Task creation form
+### After Scroll 07 (Classes)
+- [ ] Backend: `TasksService` class with in-memory storage
+- [ ] Backend: `POST /tasks` creates a task
+- [ ] Frontend: a form to create a task
 
-### After Topic 8 (Narrowing)
-- [ ] Backend: Input validation on POST /tasks
-- [ ] Frontend: Error handling when API calls fail
+### After Scroll 08 (Narrowing)
+- [ ] Backend: input validation on `POST /tasks`
+- [ ] Frontend: friendly error handling when API calls fail
 
-### After Topic 9 (Generics)
-- [ ] Backend: Generic ApiResponse<T> wrapper on all endpoints
-- [ ] Backend: Pagination with PaginatedResponse<T>
-- [ ] Frontend: Generic `useApi<T>` hook (loading / data / error states)
+### After Scroll 09 (Generics)
+- [ ] Backend: generic `ApiResponse<T>` wrapper on all endpoints
+- [ ] Backend: pagination using `PaginatedResponse<T>`
+- [ ] Frontend: a generic `useApi<T>` hook (loading, error, data)
 
-### After Topic 11 (Utility Types)
-- [ ] Backend: PUT /tasks/:id - updates a task using Partial<Task> for the body
-- [ ] Backend: DELETE /tasks/:id - deletes a task
-- [ ] Frontend: Edit and delete task UI
+### After Scroll 11 (Utility Types)
+- [ ] Backend: `PUT /tasks/:id` using `Partial<Task>` for the body
+- [ ] Backend: `DELETE /tasks/:id`
+- [ ] Frontend: edit and delete task UI
 
-### After Topic 12 (Modules)
-- [ ] Shared: Split into multiple files with barrel
-- [ ] Both: Use path aliases (@shared/...)
+### After Scroll 12 (Modules)
+- [ ] Shared: split into multiple files with a barrel
+- [ ] Both: use path aliases (`@shared/...`)
 
-### After Topic 13 (Decorators)
-- [ ] Backend: Full NestJS controller with all HTTP methods decorated properly
-- [ ] Backend: Authentication guard (optional)
+### After Scroll 13 (Decorators)
+- [ ] Backend: full NestJS controller with all HTTP methods decorated
+- [ ] Backend: an auth guard (optional)
 
-### After Topic 14 (Advanced)
-- [ ] Shared: Branded types for UserId and TaskId
-- [ ] Both: Use satisfies for config objects
+### After Scroll 14 (Advanced)
+- [ ] Shared: branded types for `UserId` and `TaskId`
+- [ ] Both: use `satisfies` on config objects
 
-### After Topic 15 (Config)
-- [ ] Both: Clean tsconfig with all strict checks
-- [ ] Both: ESLint configured and passing
-- [ ] Project references set up
+### After Scroll 15 (Config)
+- [ ] Both: clean tsconfig with strict checks
+- [ ] Both: ESLint set up and passing
+- [ ] Project references all wired up
 
 ---
 
-## API Design
+## API Design (the dojo's contract)
 
 ### Task endpoints
 
-| Method | Path | Description |
+| Method | Path | What it does |
 |--------|------|-------------|
-| GET | /tasks | Get all tasks (supports ?status= and ?page= query params) |
-| GET | /tasks/:id | Get a single task |
-| POST | /tasks | Create a new task |
+| GET | /tasks | Get all tasks (supports `?status=` and `?page=`) |
+| GET | /tasks/:id | Get one task |
+| POST | /tasks | Create a task |
 | PUT | /tasks/:id | Update a task |
 | DELETE | /tasks/:id | Delete a task |
 
 ### User endpoints (optional)
 
-| Method | Path | Description |
+| Method | Path | What it does |
 |--------|------|-------------|
-| POST | /auth/register | Register a new user |
-| POST | /auth/login | Login and get a JWT token |
-| GET | /auth/me | Get the current user |
+| POST | /auth/register | Sign up a new ninja |
+| POST | /auth/login | Log in and get a JWT |
+| GET | /auth/me | Who am I? |

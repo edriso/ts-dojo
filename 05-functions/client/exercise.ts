@@ -1,10 +1,10 @@
-// Topic 05 - Functions
-// Frontend (React + TypeScript) Exercises
+// Scroll 05 - Functions
+// Frontend dojo · React + TypeScript katas
 
 // ------------------------------------------------------------------
-// Task 7 - Event handler types
+// Kata 7 - Event handler types
 // ------------------------------------------------------------------
-// TODO: Write three typed event handlers (just log inside each one):
+// Your mission: Write three typed event handlers (just log inside each one):
 //
 // 1. handleSubmit(event: Event): void
 // 2. handleTaskClick(taskId: number): void
@@ -12,13 +12,13 @@
 //    Inside handleSearch, log the query, and if filters exist,
 //    log "Filtering by: " + filters.join(", ")
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Fetch helper function
+// Kata 8 - Fetch helper function
 // ------------------------------------------------------------------
-// TODO: Write a function fetchTasks(userId: number, status?: string): Promise<void>
+// Your mission: Write a function fetchTasks(userId: number, status?: string): Promise<void>
 // Inside, log "Fetching tasks for user " + userId
 // If status is provided, also log "Filtering by status: " + status
 //
@@ -26,13 +26,13 @@
 //   1. fetchTasks(1)
 //   2. fetchTasks(1, "todo")
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Function types as variables
 // ------------------------------------------------------------------
-// TODO: Define a type alias:
+// Your mission: Define a type alias:
 //   type OnTaskSelect = (taskId: number, title: string) => void
 //
 // Write two functions that match this type:
@@ -41,4 +41,4 @@
 //
 // Store both in variables typed as OnTaskSelect and call them.
 
-// Write your solution here:
+// Train your code here, ninja:

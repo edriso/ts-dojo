@@ -1,10 +1,10 @@
-// Topic 14 - Advanced Patterns
-// Backend (NestJS / Node.js) Exercises
+// Scroll 14 - Advanced Patterns
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 3 - Branded types
+// Kata 3 - Branded types
 // ------------------------------------------------------------------
-// TODO: Create branded number types:
+// Your mission: Create branded number types:
 //   type UserId = number & { readonly _brand: "UserId" }
 //   type TaskId = number & { readonly _brand: "TaskId" }
 //
@@ -18,13 +18,13 @@
 // Test correctly: assignTask(createTaskId(5), createUserId(2))
 // Test incorrectly: assignTask(createUserId(5), createTaskId(2))  -- should be type error
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 9 - Builder pattern
+// Kata 9 - Builder pattern
 // ------------------------------------------------------------------
-// TODO: Write a class TaskQueryBuilder:
+// Your mission: Write a class TaskQueryBuilder:
 //   - private query: { status?: string; userId?: number; page?: number; pageSize?: number } = {}
 //
 //   Methods (all return this for chaining):
@@ -43,13 +43,13 @@
 //     .build();
 //   console.log(query);
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - Environment config with satisfies
+// Kata 10 - Environment config with satisfies
 // ------------------------------------------------------------------
-// TODO: Define this type:
+// Your mission: Define this type:
 //   type EnvConfig = {
 //     NODE_ENV: "development" | "production" | "test";
 //     PORT: string;
@@ -68,13 +68,13 @@
 // Access config.NODE_ENV and hover - it should say "development" not the full union type.
 // Try adding an unknown field to config - should give an error.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Recursive task categories
 // ------------------------------------------------------------------
-// TODO: Write a recursive type:
+// Your mission: Write a recursive type:
 //   type TaskCategory = {
 //     id: number;
 //     name: string;
@@ -85,4 +85,4 @@
 //   function printCategories(category: TaskCategory, depth: number = 0): void
 //   that prints: "  ".repeat(depth) + category.name for each node recursively.
 
-// Write your solution here:
+// Train your code here, ninja:

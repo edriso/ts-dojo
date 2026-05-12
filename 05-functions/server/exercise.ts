@@ -1,10 +1,10 @@
-// Topic 05 - Functions
-// Backend (NestJS / Node.js) Exercises
+// Scroll 05 - Functions
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 9 - Controller method types
+// Kata 9 - Controller method types
 // ------------------------------------------------------------------
-// TODO: Write these typed functions (return hardcoded data):
+// Your mission: Write these typed functions (return hardcoded data):
 //
 // 1. getAllTasks(): { id: number; title: string }[]
 //    Return at least 2 fake tasks.
@@ -15,13 +15,13 @@
 // 3. createTask(title: string, description?: string): { id: number; title: string }
 //    Return a new fake task object (use Math.random() for id).
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - Logging wrapper (generics preview)
+// Kata 10 - Logging wrapper (generics preview)
 // ------------------------------------------------------------------
-// TODO: Write a function:
+// Your mission: Write a function:
 //   withLogging<T>(fn: () => T, label: string): T
 //
 // It should:
@@ -34,17 +34,17 @@
 //   const tasks = withLogging(() => getAllTasks(), "getAllTasks");
 //   console.log(tasks);
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Optional chaining with typed returns
 // ------------------------------------------------------------------
-// TODO: Write a function:
+// Your mission: Write a function:
 //   getTaskTitle(id: number): string
 //
 // It should call getTaskById(id). If the result is null, return "Task not found".
 // Otherwise return the task's title.
 // Use the optional chaining operator (?.) and nullish coalescing (??).
 
-// Write your solution here:
+// Train your code here, ninja:

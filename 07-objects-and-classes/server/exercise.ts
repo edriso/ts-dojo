@@ -1,5 +1,5 @@
-// Topic 07 - Objects and Classes
-// Backend (NestJS / Node.js) Exercises
+// Scroll 07 - Objects and Classes
+// Backend dojo · NestJS + Node katas
 
 // First, define the Task interface used throughout this file:
 interface Task {
@@ -11,9 +11,9 @@ interface Task {
 }
 
 // ------------------------------------------------------------------
-// Task 9 - NestJS-style service class
+// Kata 9 - NestJS-style service class
 // ------------------------------------------------------------------
-// TODO: Write a class TasksService with:
+// Your mission: Write a class TasksService with:
 //   - private tasks: Task[] = []
 //   - private nextId: number = 1
 //
@@ -34,13 +34,13 @@ interface Task {
 //   service.remove(1);
 //   console.log(service.findAll());
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - Abstract repository pattern
+// Kata 10 - Abstract repository pattern
 // ------------------------------------------------------------------
-// TODO: Write an abstract class BaseRepository<T> with:
+// Your mission: Write an abstract class BaseRepository<T> with:
 //   - abstract findById(id: number): T | undefined
 //   - abstract findAll(): T[]
 //   - exists(id: number): boolean  (uses findById - already implemented)
@@ -54,4 +54,4 @@ interface Task {
 // Test it with both TasksService (if you adapt it) and UserRepository.
 // Hint: you can make TasksService extend BaseRepository<Task>
 
-// Write your solution here:
+// Train your code here, ninja:

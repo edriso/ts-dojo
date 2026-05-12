@@ -1,4 +1,6 @@
-# Topic 12 - Modules and Declaration Files
+# Scroll 12 - Modules and Declaration Files
+
+> *Organize your scrolls so the dojo stays clean.*
 
 Real TypeScript projects are split across many files. Modules are how those files share
 code with each other. Declaration files (`.d.ts`) describe the types of JavaScript code
@@ -148,11 +150,11 @@ import type { Task } from "@shared/types"; // clean!
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Split a file into modules**
+**Kata 1 - Split a file into modules**
 Take the shared types you have been building (Task, User, TaskStatus, ApiResponse).
 Split them into separate files:
 - `types/task.types.ts` - Task interface and TaskStatus enum
@@ -161,22 +163,22 @@ Split them into separate files:
 
 Then create an `types/index.ts` barrel that re-exports everything.
 
-**Task 2 - import type**
+**Kata 2 - import type**
 Go through your exercise files from previous topics. Find any place where you import
 a type that is only used as a type (not as a value). Change those to `import type`.
 Notice how this makes it clear which imports are runtime values vs compile-time types.
 
-**Task 3 - Declaration file**
+**Kata 3 - Declaration file**
 Write a `.d.ts` file for a fake JavaScript library called `task-utils` with:
 - A function `formatTitle(title: string): string`
 - A function `truncate(text: string, maxLength: number): string`
 - An interface `TaskFilter { status?: string; search?: string; page?: number }`
 
-**Task 4 - Barrel file**
-Take the modules you created in Task 1 and verify that importing from `types/index.ts`
+**Kata 4 - Barrel file**
+Take the modules you created in Kata 1 and verify that importing from `types/index.ts`
 gives you all the types from all three files in one import.
 
-**Task 5 - Path aliases**
+**Kata 5 - Path aliases**
 Set up a `tsconfig.json` with a path alias:
 ```json
 "paths": { "@types/*": ["./types/*"] }
@@ -186,11 +188,11 @@ Note: you may need `ts-node -r tsconfig-paths/register` to run files with path a
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 6 - Organize React app types**
+**Kata 6 - Organize React app types**
 Create these files:
 - `client/types/props.types.ts` - all component prop types
 - `client/types/state.types.ts` - all state/store types
@@ -198,7 +200,7 @@ Create these files:
 
 Import from the barrel in your exercise file.
 
-**Task 7 - Augment window (browser globals)**
+**Kata 7 - Augment window (browser globals)**
 Sometimes you add things to `window` for debugging. Write a module augmentation:
 ```typescript
 declare global {
@@ -212,16 +214,16 @@ Then set `window.__DEBUG__ = true` safely.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 8 - Module augmentation for NestJS**
+**Kata 8 - Module augmentation for NestJS**
 In NestJS, the request object often has a `user` attached after authentication.
 Write a module augmentation that adds `user?: { id: number; role: string }` to the Express `Request` type.
 (You will need `@types/express` installed: `npm install -D @types/express`)
 
-**Task 9 - Barrel for NestJS module**
+**Kata 9 - Barrel for NestJS module**
 Create a barrel file for a NestJS `tasks` module:
 ```
 tasks/
@@ -237,7 +239,7 @@ Write the barrel that re-exports the controller, service, module, and both DTOs.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Project structure - organize types properly:**
 

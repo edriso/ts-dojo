@@ -1,10 +1,10 @@
-// Topic 04 - Unions, Intersections, and Literal Types
-// Frontend (React + TypeScript) Exercises
+// Scroll 04 - Unions, Intersections, and Literal Types
+// Frontend dojo · React + TypeScript katas
 
 // ------------------------------------------------------------------
-// Task 7 - Component state union (discriminated union)
+// Kata 7 - Component state union (discriminated union)
 // ------------------------------------------------------------------
-// TODO: Define a discriminated union for a task detail page state:
+// Your mission: Define a discriminated union for a task detail page state:
 //   - LoadingState: { state: "loading" }
 //   - SuccessState: { state: "success"; task: { id: number; title: string; status: string } }
 //   - ErrorState:   { state: "error"; message: string }
@@ -14,13 +14,13 @@
 //
 // Call it three times with each state to test it.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Task action union
+// Kata 8 - Task action union
 // ------------------------------------------------------------------
-// TODO: Write a union type TaskAction with three variants:
+// Your mission: Write a union type TaskAction with three variants:
 //   - { type: "create"; title: string }
 //   - { type: "delete"; taskId: number }
 //   - { type: "toggle"; taskId: number; currentStatus: string }
@@ -30,14 +30,14 @@
 //
 // Call it three times with each action type.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Readonly state
 // ------------------------------------------------------------------
-// TODO: Sometimes you want state to be immutable (cannot be changed).
+// Your mission: Sometimes you want state to be immutable (cannot be changed).
 // Write a type ReadonlyUser = { readonly id: number; readonly username: string; }
 // Create an object and try to change the id. Notice the error.
 
-// Write your solution here:
+// Train your code here, ninja:

@@ -1,4 +1,6 @@
-# Topic 07 - Objects and Classes
+# Scroll 07 - Objects and Classes
+
+> *Build the rooms of your dojo, brick by brick.*
 
 Objects are the basic building blocks of most TypeScript apps. Classes add structure and behavior
 to those objects using object-oriented programming. NestJS is entirely built around classes,
@@ -25,7 +27,7 @@ and even in React you will use classes for things like service layers, error bou
 
 ### Object Types
 
-You already know these from topic 03. A few more details:
+You already know these from Scroll 03. A few more details:
 
 ```typescript
 type Task = {
@@ -205,11 +207,11 @@ class Task implements Printable, Serializable {
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Index signatures**
+**Kata 1 - Index signatures**
 Create a type `TaskMetadata` with:
 - `taskId`: number (fixed property)
 - `[key: string]: unknown` (any additional string key can be added)
@@ -217,7 +219,7 @@ Create a type `TaskMetadata` with:
 Create two objects: one with just `taskId`, one with extra metadata fields.
 Write a function that reads a key from a `TaskMetadata` object.
 
-**Task 2 - Basic class**
+**Kata 2 - Basic class**
 Write a `Task` class with:
 - `readonly id: number`
 - `title: string`
@@ -226,7 +228,7 @@ Write a `Task` class with:
 - A method `complete(): void` that sets status to "done"
 - A method `toString(): string` that returns a readable description
 
-**Task 3 - Access modifiers**
+**Kata 3 - Access modifiers**
 Write a `User` class with:
 - `public username: string`
 - `private passwordHash: string`
@@ -235,31 +237,31 @@ Write a `User` class with:
 - A public method `checkPassword(password: string): boolean`
 - A public method `getRole(): string`
 
-**Task 4 - Static members**
+**Kata 4 - Static members**
 Add a static property `count` to a `TaskManager` class that tracks how many `TaskManager` instances
 were created. Each `new TaskManager()` should increment it. Add a static `reset()` method.
 Log the count after creating 3 instances.
 
-**Task 5 - Abstract class**
+**Kata 5 - Abstract class**
 Write an abstract class `BaseRepository<T>` with:
 - Abstract methods: `findById(id: number): T | undefined` and `findAll(): T[]`
 - A non-abstract method `exists(id: number): boolean` that uses `findById`
 
 Then write a `TaskRepository` class that extends it with a hardcoded array of tasks.
 
-**Task 6 - Implements interface**
+**Kata 6 - Implements interface**
 Write an interface `Exportable` with a method `toJSON(): string`.
 Write an interface `Importable` with a static-style method signature (hint: you will need
 to handle this differently - look up "interface with static method TypeScript").
-Make the `Task` class from Task 2 implement `Exportable` by adding a `toJSON` method.
+Make the `Task` class from Kata 2 implement `Exportable` by adding a `toJSON` method.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Store-like class (Zustand/Redux preview)**
+**Kata 7 - Store-like class (Zustand/Redux preview)**
 Write a class `TaskStore` that simulates a simple state store:
 - Private `tasks: { id: number; title: string; status: string }[]` (empty array)
 - Public `addTask(title: string): void`
@@ -267,10 +269,10 @@ Write a class `TaskStore` that simulates a simple state store:
 - Public `getTasks(): { id: number; title: string; status: string }[]`
 - Static `getInstance(): TaskStore` (singleton pattern - only one instance exists)
 
-**Task 8 - React error boundary class (optional)**
+**Kata 8 - React error boundary class (optional)**
 Modern React is mostly hooks-based, but **error boundaries** are still written
 as classes. Write a class `TaskListErrorBoundary` (no React imports needed for
-this exercise — just simulate the shape):
+this exercise, just simulate the shape):
 - Public `state: { hasError: boolean; message: string | null }`
 - A static `getDerivedStateFromError(error: Error): { hasError: boolean; message: string }`
 - A `componentDidCatch(error: Error): void` method that logs the error
@@ -278,11 +280,11 @@ this exercise — just simulate the shape):
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - NestJS-style service class**
+**Kata 9 - NestJS-style service class**
 Write a class `TasksService` that:
 - Has a private array of tasks (with `id`, `title`, `status`, `createdAt` fields)
 - Has a private `nextId: number` starting at 1
@@ -291,15 +293,15 @@ Write a class `TasksService` that:
 - `create(title: string, description?: string): Task` (increments `nextId`)
 - `remove(id: number): boolean` (returns true if removed, false if not found)
 
-**Task 10 - Repository pattern with abstract class**
-Build on Task 5's abstract `BaseRepository`. Create a `UserRepository` class alongside
+**Kata 10 - Repository pattern with abstract class**
+Build on Kata 5's abstract `BaseRepository`. Create a `UserRepository` class alongside
 the `TaskRepository`. Both extend `BaseRepository` with their own data arrays.
 Then write a function `printAllFromRepo<T>(repo: BaseRepository<T>): void` that calls `findAll()`
 and logs each item. (This is another generics preview.)
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Backend:**
 Convert your NestJS service from a plain file to a proper class-based service

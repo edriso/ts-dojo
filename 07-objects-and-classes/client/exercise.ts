@@ -1,10 +1,10 @@
-// Topic 07 - Objects and Classes
-// Frontend (React + TypeScript) Exercises
+// Scroll 07 - Objects and Classes
+// Frontend dojo · React + TypeScript katas
 
 // ------------------------------------------------------------------
-// Task 7 - Store-like class (Zustand preview)
+// Kata 7 - Store-like class (Zustand preview)
 // ------------------------------------------------------------------
-// TODO: Write a class TaskStore that acts like a simple state store.
+// Your mission: Write a class TaskStore that acts like a simple state store.
 //
 // It should have:
 //   - private tasks: { id: number; title: string; status: string }[]  (empty array)
@@ -24,13 +24,13 @@
 //   store1.addTask("Learn TypeScript");
 //   console.log(store2.getTasks());  // should show the task
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Readonly state object
+// Kata 8 - Readonly state object
 // ------------------------------------------------------------------
-// TODO: Write a class ComponentState with:
+// Your mission: Write a class ComponentState with:
 //   - readonly componentName: string (set in constructor)
 //   - private _loading: boolean = false
 //   - private _error: string | null = null
@@ -45,4 +45,4 @@
 //   state.setError("Network error")
 //   console.log(state.isLoading, state.error)
 
-// Write your solution here:
+// Train your code here, ninja:

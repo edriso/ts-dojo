@@ -1,4 +1,6 @@
-# Topic 10 - Type Manipulation
+# Scroll 10 - Type Manipulation
+
+> *Forge new types from old ones. The type smith's craft.*
 
 This is where TypeScript gets really powerful. Instead of writing types by hand, you can
 create new types by transforming existing ones. This is the foundation of advanced TypeScript
@@ -127,11 +129,11 @@ type Created = ReturnType<typeof createTask>; // { id: number; title: string }
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - keyof**
+**Kata 1 - keyof**
 Given this interface:
 ```typescript
 interface Task {
@@ -146,7 +148,7 @@ Create a type `TaskKey = keyof Task`.
 Write a function `getTaskField<K extends keyof Task>(task: Task, key: K): Task[K]`.
 Call it 3 times with different field names.
 
-**Task 2 - typeof**
+**Kata 2 - typeof**
 Define a config object (not a type, a real value):
 ```
 const defaultConfig = { port: 3000, env: "development", maxTasks: 100 }
@@ -154,14 +156,14 @@ const defaultConfig = { port: 3000, env: "development", maxTasks: 100 }
 Use `typeof` to create a `Config` type from it.
 Write a function `mergeConfig(base: Config, overrides: Partial<Config>): Config`.
 
-**Task 3 - Indexed access**
+**Kata 3 - Indexed access**
 Given a `User` interface with a `preferences` field that is an object with `theme`, `language`, `notifications`.
 Use indexed access types to extract:
 - The type of the `preferences` field
 - The type of `preferences.theme`
 Write them as separate type aliases.
 
-**Task 4 - Conditional types**
+**Kata 4 - Conditional types**
 Write these conditional types:
 - `IsArray<T>` - true if T is an array, false otherwise
 - `Flatten<T>` - if T is an array, return the element type; otherwise return T
@@ -169,7 +171,7 @@ Write these conditional types:
   - `Flatten<string>` = string
 - `Nullable<T>` - adds null to the type
 
-**Task 5 - Mapped types**
+**Kata 5 - Mapped types**
 Write these mapped types:
 - `ReadonlyObject<T>` - makes all fields readonly
 - `OptionalObject<T>` - makes all fields optional
@@ -178,7 +180,7 @@ Write these mapped types:
 
 Test each one on the `Task` interface.
 
-**Task 6 - Template literal types**
+**Kata 6 - Template literal types**
 Given `type Field = "title" | "status" | "description"`:
 - Create `GetterMethod = "getTitle" | "getStatus" | "getDescription"` using template literals
 - Create `SetterMethod = "setTitle" | "setStatus" | "setDescription"` using template literals
@@ -187,11 +189,11 @@ Given `type Field = "title" | "status" | "description"`:
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Component prop extractor**
+**Kata 7 - Component prop extractor**
 Given a complex component props type, use indexed access to extract sub-types:
 ```typescript
 type TaskFormProps = {
@@ -205,7 +207,7 @@ Extract:
 - `TaskTag = TaskFormProps["task"]["tags"][number]`
 - `SubmitData = Parameters<TaskFormProps["onSubmit"]>[0]`
 
-**Task 8 - CSS class mapper**
+**Kata 8 - CSS class mapper**
 Using template literals, write a type that generates class names:
 ```typescript
 type Size = "sm" | "md" | "lg";
@@ -217,11 +219,11 @@ Write a function `createButtonClass(size: Size, color: Color): ButtonClass`.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - DTO builder with mapped types**
+**Kata 9 - DTO builder with mapped types**
 Given a full `Task` interface, use mapped types to automatically derive DTO types:
 - `CreateTaskDto = Omit<Task, "id" | "createdAt" | "updatedAt"> + make status optional`
 - `UpdateTaskDto = Partial<Omit<Task, "id" | "createdAt" | "updatedAt">>`
@@ -229,7 +231,7 @@ Given a full `Task` interface, use mapped types to automatically derive DTO type
 
 Write these as type aliases using mapped types and built-in utility types.
 
-**Task 10 - Event system with template literals**
+**Kata 10 - Event system with template literals**
 Write a type system for typed backend events:
 ```typescript
 type ResourceName = "task" | "user" | "comment";
@@ -241,7 +243,7 @@ Write a function `emitEvent(event: EventName, data: unknown): void` that logs th
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Use type manipulation to derive DTOs instead of writing them by hand:

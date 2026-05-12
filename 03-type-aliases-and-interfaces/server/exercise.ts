@@ -1,10 +1,10 @@
-// Topic 03 - Type Aliases and Interfaces
-// Backend (NestJS / Node.js) Exercises
+// Scroll 03 - Type Aliases and Interfaces
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 10 - DTO interfaces
+// Kata 10 - DTO interfaces
 // ------------------------------------------------------------------
-// TODO: Write an interface CreateTaskDto with:
+// Your mission: Write an interface CreateTaskDto with:
 //   - title: string (required)
 //   - description: string (optional)
 //   - dueDate: string (optional)
@@ -15,28 +15,28 @@
 //   - dueDate?: string
 //   - status?: string
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 11 - Service interface
+// Kata 11 - Service interface
 // ------------------------------------------------------------------
 // First define a simple Task interface for use in the service:
 //   Task { id: number, title: string, status: string }
 //
-// TODO: Write an interface TaskService with these method signatures:
+// Your mission: Write an interface TaskService with these method signatures:
 //   - findAll(): Task[]
 //   - findById(id: number): Task | undefined
 //   - create(dto: CreateTaskDto): Task
 //   - delete(id: number): void
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - BaseEntity pattern
 // ------------------------------------------------------------------
-// TODO: Write an interface BaseEntity with:
+// Your mission: Write an interface BaseEntity with:
 //   - id: number
 //   - createdAt: string
 //   - updatedAt: string
@@ -48,4 +48,4 @@
 //
 // Create one Task object (make up the values) and log it.
 
-// Write your solution here:
+// Train your code here, ninja:

@@ -1,11 +1,12 @@
-# Frontend - React + TypeScript
+# Frontend Dojo: React + TypeScript
 
-This is the frontend for the Task Manager app. It is scaffolded with Vite,
-written in TypeScript, and consumes types from `../shared/`.
+This is the frontend side of the Task Manager. You are the React ninja. Your
+weapon is Vite, your shield is TypeScript, and your secret scrolls live in
+`../shared/`.
 
 ---
 
-## Setup
+## Set Up Your Gear
 
 ```bash
 cd project/client
@@ -14,18 +15,16 @@ npm install
 npm install react-router-dom zustand
 ```
 
-Recommended extras:
+Optional extras:
 
-- `react-router-dom` — client-side routing
-- `zustand` — small, typed state store
-- `@tanstack/react-query` (optional) — drop-in cache + fetching layer if you
-  prefer it to a hand-rolled `useApi` hook
+- `@tanstack/react-query` if you want a ready-made fetching and cache layer
+  instead of writing your own `useApi` hook
 
 ---
 
-## Path Alias for Shared Types
+## Wire Up the Shared Scroll Path
 
-Add this to your `tsconfig.json` (or `tsconfig.app.json` for Vite):
+Add this to `tsconfig.json` (or `tsconfig.app.json` if you are using Vite):
 
 ```json
 {
@@ -39,7 +38,7 @@ Add this to your `tsconfig.json` (or `tsconfig.app.json` for Vite):
 }
 ```
 
-For Vite, also add to `vite.config.ts`:
+Vite also needs to know about the aliases. In `vite.config.ts`:
 
 ```typescript
 import { fileURLToPath, URL } from "node:url";
@@ -57,7 +56,7 @@ export default defineConfig({
 });
 ```
 
-Once aliased you can write:
+Now you can write:
 
 ```ts
 import type { Task, ApiResponse } from "@shared/index";
@@ -65,19 +64,19 @@ import type { Task, ApiResponse } from "@shared/index";
 
 ---
 
-## Suggested File Layout
+## Suggested Layout
 
 ```
 src/
   types/
-    props.types.ts    <- component prop types
-    state.types.ts    <- store and state types
-    index.ts          <- barrel
+    props.types.ts     <- component prop types
+    state.types.ts     <- store and state types
+    index.ts           <- barrel
   hooks/
-    useApi.ts         <- generic fetch hook
-    useTasks.ts       <- task-specific hook
+    useApi.ts          <- generic fetch hook
+    useTasks.ts        <- task-specific hook
   stores/
-    taskStore.ts      <- Zustand store
+    taskStore.ts       <- Zustand store
     authStore.ts
   components/
     TaskCard.tsx
@@ -87,14 +86,14 @@ src/
     HomePage.tsx
     TasksPage.tsx
   api/
-    client.ts         <- typed fetch wrapper
+    client.ts          <- typed fetch wrapper
   App.tsx
   main.tsx
 ```
 
 ---
 
-## Tiny Examples
+## A Few Mini Katas
 
 ### Typed component props
 
@@ -116,7 +115,7 @@ export function TaskCard({ task, onToggle }: TaskCardProps) {
 }
 ```
 
-### Generic API hook
+### A generic API hook
 
 ```ts
 import { useEffect, useState } from "react";
@@ -154,7 +153,7 @@ export function useApi<T>(url: string) {
 }
 ```
 
-### Typed Zustand store
+### A typed Zustand store
 
 ```ts
 import { create } from "zustand";
@@ -177,6 +176,7 @@ export const useTaskStore = create<TaskState>((set) => ({
 
 ---
 
-## Features to Build
+## What to Build Next
 
-Check `project/README.md` for the full feature checklist tied to each topic.
+Check `project/README.md` for the full mission checklist tied to each scroll.
+Train one move at a time. The dojo is patient.

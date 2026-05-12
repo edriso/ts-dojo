@@ -1,10 +1,10 @@
-// Topic 12 - Modules and Declarations
-// Backend (NestJS / Node.js) Exercises
+// Scroll 12 - Modules and Declarations
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 8 - Module augmentation for Express Request
+// Kata 8 - Module augmentation for Express Request
 // ------------------------------------------------------------------
-// TODO: Create a file server/types/express.d.ts with this content:
+// Your mission: Create a file server/types/express.d.ts with this content:
 //
 //   import "express";
 //
@@ -27,13 +27,13 @@
 //
 // (We use a simplified req type here to avoid needing express installed)
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 9 - Barrel file for a tasks module
+// Kata 9 - Barrel file for a tasks module
 // ------------------------------------------------------------------
-// TODO: Create this folder structure:
+// Your mission: Create this folder structure:
 //
 //   server/tasks/
 //     tasks.service.ts  - export class TasksService (stub)
@@ -53,7 +53,7 @@
 // ------------------------------------------------------------------
 // Bonus - Declaration file for a fake utility library
 // ------------------------------------------------------------------
-// TODO: Create a file server/types/task-utils.d.ts with:
+// Your mission: Create a file server/types/task-utils.d.ts with:
 //
 //   declare module "task-utils" {
 //     export function formatTitle(title: string): string;
@@ -71,4 +71,4 @@
 //   const filter: TaskFilter = { status: "todo", page: 1 };
 //   console.log(filter);
 
-// Write your solution here:
+// Train your code here, ninja:

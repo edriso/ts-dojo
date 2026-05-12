@@ -1,5 +1,5 @@
-// Topic 09 - Generics
-// Backend (NestJS / Node.js) Exercises
+// Scroll 09 - Generics
+// Backend dojo · NestJS + Node katas
 
 interface Task {
   id: number;
@@ -10,9 +10,9 @@ interface Task {
 }
 
 // ------------------------------------------------------------------
-// Task 9 - Generic base service
+// Kata 9 - Generic base service
 // ------------------------------------------------------------------
-// TODO: Write an abstract class BaseService<T extends { id: number }> with:
+// Your mission: Write an abstract class BaseService<T extends { id: number }> with:
 //   - protected items: T[] = []
 //   - findAll(): T[]
 //   - findOne(id: number): T | undefined
@@ -33,13 +33,13 @@ interface Task {
 //   service.remove(1);
 //   console.log(service.findAll());
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - Generic paginate function
+// Kata 10 - Generic paginate function
 // ------------------------------------------------------------------
-// TODO: Write a generic function:
+// Your mission: Write a generic function:
 //   paginate<T>(
 //     items: T[],
 //     page: number,
@@ -51,13 +51,13 @@ interface Task {
 //
 // Test with an array of 10 fake tasks, page=2, pageSize=3.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Generic ok/fail response helpers
 // ------------------------------------------------------------------
-// TODO: Write these generic helper functions:
+// Your mission: Write these generic helper functions:
 //
 //   type ApiSuccess<T> = { success: true; data: T }
 //   type ApiError    = { success: false; statusCode: number; message: string }
@@ -70,4 +70,4 @@ interface Task {
 //   console.log(ok(service.findAll()));
 //   console.log(fail(404, "Task not found"));
 
-// Write your solution here:
+// Train your code here, ninja:

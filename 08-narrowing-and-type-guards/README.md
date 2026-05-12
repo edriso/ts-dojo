@@ -1,4 +1,6 @@
-# Topic 08 - Narrowing and Type Guards
+# Scroll 08 - Narrowing and Type Guards
+
+> *Teach TypeScript to read your mind, one check at a time.*
 
 When TypeScript is not sure what type a value is (for example, it could be `string | number`),
 you have to narrow it down before you can use it safely. Narrowing is how you help TypeScript
@@ -13,7 +15,7 @@ understand exactly what type it is in a specific part of your code.
 - The `in` operator for narrowing
 - Custom type guard functions with `value is Type`
 - Assertion functions
-- Discriminated union narrowing (review from topic 04)
+- Discriminated union narrowing (review from Scroll 04)
 - Exhaustiveness checking with `never`
 - Truthiness narrowing
 
@@ -138,24 +140,24 @@ function getArea(shape: Shape): number {
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - typeof narrowing**
+**Kata 1 - typeof narrowing**
 Write a function `stringify(value: string | number | boolean): string`.
 Use typeof to handle each case:
 - string: return it as-is with quotes around it (e.g. `'"hello"'`)
 - number: return `"number:" + value`
 - boolean: return `"yes"` for true and `"no"` for false
 
-**Task 2 - Truthiness narrowing**
+**Kata 2 - Truthiness narrowing**
 Write a function `getTaskDescription(description: string | null | undefined): string`.
 If description is a non-empty string, return it.
 If it is an empty string, return "Description is empty".
 If it is null or undefined, return "No description provided".
 
-**Task 3 - in operator**
+**Kata 3 - in operator**
 Write two types:
 - `AdminUser`: has a `permissions: string[]` property
 - `RegularUser`: has a `savedTaskIds: number[]` property
@@ -164,7 +166,7 @@ Both have `id: number` and `username: string`.
 Write a function `getUserDashboard(user: AdminUser | RegularUser): string`
 that uses `"permissions" in user` to narrow and returns different strings.
 
-**Task 4 - Custom type guard**
+**Kata 4 - Custom type guard**
 Write a type guard function `isTask(value: unknown): value is { id: number; title: string }`.
 It should return true only if:
 - value is not null
@@ -176,12 +178,12 @@ It should return true only if:
 Then write a function `processApiResponse(data: unknown): string` that uses this guard
 to safely access `data.title` if it is a task.
 
-**Task 5 - Assertion function**
+**Kata 5 - Assertion function**
 Write `assertIsDefined<T>(value: T | null | undefined): asserts value is T`.
 It should throw `new Error("Value is null or undefined")` if the value is null or undefined.
 Then use it to safely access a possibly-null task title.
 
-**Task 6 - Exhaustiveness check**
+**Kata 6 - Exhaustiveness check**
 Write a type `TaskStatus = "todo" | "in_progress" | "done"`.
 Write a function `getStatusIcon(status: TaskStatus): string` using a switch statement.
 Add an exhaustiveness check at the default case.
@@ -190,17 +192,17 @@ that `getStatusIcon` needs to handle it.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Narrowing in a React component**
+**Kata 7 - Narrowing in a React component**
 Write a function `renderTaskItem(item: { id: number; title: string } | string | null): string`.
 - If it is null, return "Nothing to show"
 - If it is a string, return "Label: " + item
 - If it is an object, return "Task #" + item.id + ": " + item.title
 
-**Task 8 - Type guard for API validation**
+**Kata 8 - Type guard for API validation**
 When your frontend receives data from an API, you cannot trust its shape.
 Write a type guard `isUserObject(data: unknown): data is { id: number; username: string; email: string }`.
 Then write a function `handleLoginResponse(data: unknown): void`
@@ -208,18 +210,18 @@ that uses the guard to safely log the username, or throws an error if the data i
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - Assertion for request validation**
+**Kata 9 - Assertion for request validation**
 In a backend, you need to validate incoming request data.
 Write an assertion function `assertIsString(value: unknown, fieldName: string): asserts value is string`.
 If value is not a string, throw `new Error(fieldName + " must be a string")`.
 Then write a `validateCreateTaskBody(body: unknown): { title: string; description: string | undefined }`.
 Use the assertion function to validate and narrow the title field.
 
-**Task 10 - instanceof error handling**
+**Kata 10 - instanceof error handling**
 Write a custom error class `AppError extends Error` with a `statusCode: number` property.
 Write a function `handleServiceError(error: unknown): void`.
 If it is an `AppError`, log the statusCode and message.
@@ -229,7 +231,7 @@ Test it by calling with all three error types.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Add type guard functions:

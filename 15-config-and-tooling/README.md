@@ -1,4 +1,6 @@
-# Topic 15 - Config and Tooling
+# Scroll 15 - Config and Tooling
+
+> *Sharpen every blade. Tighten every strap. Black belt time.*
 
 You have been writing TypeScript throughout this entire learning path. This final topic
 is about fully understanding the tools you have been using: the TypeScript compiler, tsconfig,
@@ -12,7 +14,7 @@ strict mode options, and how TypeScript fits into real build pipelines.
 - Important tsconfig compiler options
 - The `tsc` CLI
 - Project references (linking multiple TS projects)
-- Path aliases (already covered in topic 12, deeper here)
+- Path aliases (already covered in Scroll 12, deeper here)
 - TypeScript with ESLint
 - Declaration maps and source maps
 - TypeScript performance tips
@@ -110,11 +112,11 @@ npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Audit your tsconfig**
+**Kata 1 - Audit your tsconfig**
 Go through your project `tsconfig.json` and make sure these are set:
 - `strict: true`
 - `noUnusedLocals: true`
@@ -124,25 +126,25 @@ Go through your project `tsconfig.json` and make sure these are set:
 
 Fix any errors that appear when you turn these on in your existing exercise code.
 
-**Task 2 - noUncheckedIndexedAccess**
+**Kata 2 - noUncheckedIndexedAccess**
 Add `"noUncheckedIndexedAccess": true` to your tsconfig.
-Go back to topic 09 exercise files and see which code now has type errors.
+Go back to Scroll 09 exercise files and see which code now has type errors.
 Fix those errors by properly handling the `| undefined` case (use `??` or `if` checks).
 
-**Task 3 - Compile your exercises**
+**Kata 3 - Compile your exercises**
 From the root of this repo, create a `tsconfig.json` that:
 - Includes all `.ts` files in `*/client/*.ts` and `*/server/*.ts`
-- Has strict mode and all the extra checks from Task 1
+- Has strict mode and all the extra checks from Kata 1
 - Points `outDir` to a `./dist` folder
 
 Run `npx tsc` and fix all errors until it compiles cleanly.
 
-**Task 4 - Source maps**
+**Kata 4 - Source maps**
 Add `"sourceMap": true` to your tsconfig. Compile and look in the dist folder.
 Each `.js` file now has a `.js.map` file. This makes debuggers show your original
 TypeScript code when you set breakpoints.
 
-**Task 5 - ESLint setup**
+**Kata 5 - ESLint setup**
 Set up ESLint with TypeScript:
 ```bash
 npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
@@ -152,14 +154,14 @@ Run `npx eslint . --ext .ts` and fix the warnings in your exercise files.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
-**Task 6 - NestJS tsconfig**
+**Kata 6 - NestJS tsconfig**
 NestJS generates both `tsconfig.json` and `tsconfig.build.json`.
 Read both and understand what `tsconfig.build.json` does differently.
 (It excludes test files and disables source maps for leaner production builds.)
 
-**Task 7 - Project references**
+**Kata 7 - Project references**
 Set up project references between `project/shared`, `project/client`, and `project/server`:
 1. Add `"composite": true` to `project/shared/tsconfig.json`
 2. Add `"references": [{ "path": "../shared" }]` to `project/server/tsconfig.json`
@@ -167,16 +169,16 @@ Set up project references between `project/shared`, `project/client`, and `proje
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
-**Task 8 - Vite tsconfig**
+**Kata 8 - Vite tsconfig**
 Vite often splits into `tsconfig.json` (for the editor/IDE) and `tsconfig.app.json` (for builds).
 Read the generated config in `project/client` and understand each option.
 Make sure `strict: true` is set and add `noUnusedLocals: true`.
 
 ---
 
-## Apply to the Project - Final Checklist
+## Bring it to the Project - The Final Belt Test
 
 By the time you finish this topic, your project should be complete.
 
@@ -214,10 +216,10 @@ By the time you finish this topic, your project should be complete.
 
 ---
 
-## Congratulations
+## You Earned the Black Belt
 
-If you have completed all 15 topics and built the project, you are well on your way to being
-a TypeScript ninja. The key concepts you now know:
+If you finished all 15 scrolls and built the project, stand tall. You are now a
+true TypeScript ninja. You have all of this in your dojo:
 
 - The full type system (primitives, unions, intersections, literals, generics)
 - Object-oriented TypeScript (classes, interfaces, abstract classes)
@@ -226,7 +228,8 @@ a TypeScript ninja. The key concepts you now know:
 - The full toolchain (tsconfig, ESLint, project references)
 - Framework integration (NestJS decorators, React with TypeScript)
 
-Keep practicing. The best way to get better is to write TypeScript every day.
+Keep training. A ninja who writes TypeScript every day stays sharp. A ninja who
+stops, gets dull. See you in the dojo tomorrow.
 
 ---
 

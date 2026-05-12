@@ -1,5 +1,5 @@
-// Topic 11 - Utility Types
-// Backend (NestJS / Node.js) Exercises
+// Scroll 11 - Utility Types
+// Backend dojo · NestJS + Node katas
 
 interface Task {
   id: number;
@@ -13,9 +13,9 @@ interface Task {
 }
 
 // ------------------------------------------------------------------
-// Task 9 - Public task shape with Pick and Omit
+// Kata 9 - Public task shape with Pick and Omit
 // ------------------------------------------------------------------
-// TODO:
+// Your mission:
 // 1. Create a type PublicTask = Omit<Task, "internalNotes">
 //    (removes the internal field from the public response)
 //
@@ -27,13 +27,13 @@ interface Task {
 //
 // Create 2 fake tasks and test both functions.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - Type-safe cache with Record
+// Kata 10 - Type-safe cache with Record
 // ------------------------------------------------------------------
-// TODO: Write a class TaskCache:
+// Your mission: Write a class TaskCache:
 //   - private store: Record<number, Task> = {}
 //
 //   Methods:
@@ -50,13 +50,13 @@ interface Task {
 //
 // Test it: add 3 tasks, get one, invalidate one, log all remaining.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - ReturnType and Parameters
 // ------------------------------------------------------------------
-// TODO: Write this function (do not change it after writing it):
+// Your mission: Write this function (do not change it after writing it):
 //   function findTaskWithFilter(
 //     tasks: Task[],
 //     predicate: (task: Task) => boolean,
@@ -70,4 +70,4 @@ interface Task {
 //
 // Log the types by creating variables of each type and checking them in VS Code.
 
-// Write your solution here:
+// Train your code here, ninja:

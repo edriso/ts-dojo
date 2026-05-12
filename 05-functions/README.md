@@ -1,4 +1,6 @@
-# Topic 05 - Functions
+# Scroll 05 - Functions
+
+> *Every move you throw is a function. Time to type them with care.*
 
 Functions are where most of your TypeScript code lives. TypeScript gives you full control
 over typing every input and output. Getting comfortable with function types early makes
@@ -121,17 +123,17 @@ function processTask(
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Basic typed functions**
+**Kata 1 - Basic typed functions**
 Write three functions:
 - `add(a: number, b: number): number`
 - `capitalize(str: string): string` (first letter uppercase)
 - `repeat(str: string, times: number): string` (repeats the string)
 
-**Task 2 - Optional and default parameters**
+**Kata 2 - Optional and default parameters**
 Write a function `createTask` that takes:
 - `title`: required string
 - `description`: optional string
@@ -140,11 +142,11 @@ Write a function `createTask` that takes:
 
 Return an object with all four properties.
 
-**Task 3 - Rest parameters**
+**Kata 3 - Rest parameters**
 Write a function `createTaskList(listName: string, ...taskTitles: string[])` that returns an object:
 `{ listName: string; tasks: string[] }`.
 
-**Task 4 - Function type expressions**
+**Kata 4 - Function type expressions**
 Define two function types:
 - `Validator = (value: string) => boolean`
 - `Transformer = (value: string) => string`
@@ -155,14 +157,14 @@ Then write:
 
 Write two implementations of each type and test them.
 
-**Task 5 - Overloads**
+**Kata 5 - Overloads**
 Write a function `findTask` with two overloads:
 - When called with a `number`, it finds by ID and returns a string (the task title)
 - When called with a `string`, it finds by title and returns a number (the task ID)
 
 For the implementation, make up fake data. Just return hardcoded values for ID 1 = "Buy groceries".
 
-**Task 6 - Higher-order function**
+**Kata 6 - Higher-order function**
 Write a function `filterTasks` that takes:
 - An array of task objects `{ id: number; title: string; isComplete: boolean }[]`
 - A predicate function `(task: ...) => boolean`
@@ -172,11 +174,11 @@ Test it by filtering for incomplete tasks and for tasks with long titles.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Event handler types**
+**Kata 7 - Event handler types**
 In React, event handlers are functions. Write typed handlers:
 - `handleSubmit(event: React.FormEvent): void`
 - `handleTaskClick(taskId: number): void`
@@ -184,32 +186,32 @@ In React, event handlers are functions. Write typed handlers:
 
 Write the function bodies (just log the arguments for now).
 
-**Task 8 - Fetch helper**
+**Kata 8 - Fetch helper**
 Write a function `fetchTasks(userId: number, status?: string): Promise<void>`.
 Inside, log "Fetching tasks for user" + userId + (status if provided).
-We will make this return actual data in topic 09 with generics.
+We will make this return actual data in Scroll 09 with generics.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - Controller method types**
+**Kata 9 - Controller method types**
 In NestJS, controller methods are typed functions. Write these:
 - `getAllTasks(): { id: number; title: string }[]` - returns a hardcoded array
 - `getTaskById(id: number): { id: number; title: string } | null` - returns task if id is 1
 - `createTask(title: string, description?: string): { id: number; title: string }`
 
-**Task 10 - Middleware-style function**
+**Kata 10 - Middleware-style function**
 Write a function `withLogging<T>(fn: () => T, label: string): T`.
 It should log "Starting: " + label, call fn, log "Done: " + label, then return the result.
 Test it by wrapping a function that returns a string.
-Note: this is a preview of generics (topic 09). The `<T>` means "any type". Try to understand it.
+Note: this is a preview of generics (Scroll 09). The `<T>` means "any type". Try to understand it.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Add typed function signatures for your API:

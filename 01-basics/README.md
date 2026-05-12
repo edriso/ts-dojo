@@ -1,4 +1,6 @@
-# Topic 01 - Basics and Setup
+# Scroll 01 - Basics and Setup
+
+> *Step into the dojo and pick up your first weapon.*
 
 TypeScript is JavaScript with types added on top. You write `.ts` files, TypeScript checks them for mistakes,
 then compiles them into regular JavaScript that the browser or Node.js can run.
@@ -69,66 +71,66 @@ ts-node file.ts  # runs a .ts file directly without compiling first
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks (do these regardless of frontend or backend)
+### Shared Katas (every ninja does these)
 
-**Task 1 - Setup**
+**Kata 1 - Setup**
 Create a new folder, run `npm init -y`, then run `npx tsc --init` to generate a `tsconfig.json`.
 Open it and make sure `strict` is set to `true`. Look through the other options and read the comments.
 
-**Task 2 - Your first TypeScript file**
+**Kata 2 - Your first TypeScript file**
 Create a file called `hello.ts`. Declare three variables: your name as a string, your age as a number,
 and a boolean called `isLearningTypeScript` set to `true`. Use type annotations for two of them and let
 TypeScript infer the third. Then log a sentence using all three variables.
 
-**Task 3 - Break it on purpose**
+**Kata 3 - Break it on purpose**
 In the same file, try assigning a number to your name variable (`name = 42`). Notice the red squiggly line
 in VS Code and the error TypeScript gives you. This is TypeScript doing its job. Then undo the change.
 
-**Task 4 - Type inference exercise**
+**Kata 4 - Type inference exercise**
 Declare five variables without type annotations and give them values of different types. Hover over each
 one in VS Code and see what type TypeScript inferred. Write a comment next to each one saying what type
 TypeScript picked.
 
-**Task 5 - Compile and run**
+**Kata 5 - Compile and run**
 Compile your `hello.ts` file using `tsc hello.ts`. Look at the generated `hello.js` file.
 Notice that TypeScript removed all the type annotations. Then run `ts-node hello.ts` directly.
 
 ---
 
-### Frontend Tasks (React)
+### Frontend Katas (React ninja)
 
 Open `client/exercise.ts` and complete the TODOs inside.
 
-**Task 6 - Typing component data**
+**Kata 6 - Typing component data**
 In a frontend app, components have data (state). Write a TypeScript object that represents the data
 for a "User Profile" component. It should have: `username` (string), `email` (string), `age` (number),
 `isPremium` (boolean), and `joinedAt` (string for now, we will use Date later). Use type annotations.
 
-**Task 7 - Inference in functions**
+**Kata 7 - Inference in functions**
 Write a function called `formatUsername` that takes a username string and returns it with `@` in front.
 Do not add return type annotation. Hover over the function to see what TypeScript inferred as the return type.
 
 ---
 
-### Backend Tasks (NestJS / Node.js)
+### Backend Katas (NestJS ninja)
 
 Open `server/exercise.ts` and complete the TODOs inside.
 
-**Task 8 - Typing a config object**
+**Kata 8 - Typing a config object**
 In a backend app, you often have a config object with database URL, port, etc.
 Write a typed config object with: `port` (number), `databaseUrl` (string), `jwtSecret` (string),
 `isDevelopment` (boolean). Use type annotations on all of them.
 
-**Task 9 - Strict mode catches bugs**
+**Kata 9 - Strict mode catches bugs**
 Write a function `getUserById` that takes an `id` parameter. Try calling it without passing an argument.
 With `strict` mode on, TypeScript should warn you about implicit `any`. Fix it by adding `: number`
 to the parameter. Notice the difference.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 At this point you can scaffold the actual project folders.
 

@@ -1,10 +1,10 @@
-// Topic 08 - Narrowing and Type Guards
-// Backend (NestJS / Node.js) Exercises
+// Scroll 08 - Narrowing and Type Guards
+// Backend dojo · NestJS + Node katas
 
 // ------------------------------------------------------------------
-// Task 9 - Assertion for request validation
+// Kata 9 - Assertion for request validation
 // ------------------------------------------------------------------
-// TODO: Write an assertion function:
+// Your mission: Write an assertion function:
 //   assertIsString(value: unknown, fieldName: string): asserts value is string
 //   - throws new Error(fieldName + " must be a string, got " + typeof value)
 //   - if value is not a string
@@ -19,13 +19,13 @@
 //   1. A valid body: { title: "Buy groceries", description: "At the market" }
 //   2. An invalid body: { title: 123 }  -- should throw
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 10 - instanceof error handling
+// Kata 10 - instanceof error handling
 // ------------------------------------------------------------------
-// TODO: Write a class AppError extends Error with:
+// Your mission: Write a class AppError extends Error with:
 //   - constructor(public statusCode: number, message: string) { super(message) }
 //
 // Write a function handleServiceError(error: unknown): void that:
@@ -38,17 +38,17 @@
 //   handleServiceError(new Error("Database connection failed"))
 //   handleServiceError("something went wrong")
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Narrowing in middleware-style function
 // ------------------------------------------------------------------
-// TODO: Write a function parseJsonBody(body: unknown): Record<string, unknown>
+// Your mission: Write a function parseJsonBody(body: unknown): Record<string, unknown>
 //   - if body is a string, parse it with JSON.parse and return it
 //   - if body is already an object (and not null), return it as Record<string, unknown>
 //   - otherwise throw new Error("Cannot parse body")
 //
 // Test with a JSON string and with a plain object.
 
-// Write your solution here:
+// Train your code here, ninja:

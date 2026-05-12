@@ -1,4 +1,6 @@
-# Topic 09 - Generics
+# Scroll 09 - Generics
+
+> *One technique, many shapes. The dojo's secret of reuse.*
 
 Generics are one of the most powerful features in TypeScript. They let you write code that works
 with any type while still being fully type-safe. Instead of writing the same function five times
@@ -132,20 +134,20 @@ const result = merge({ name: "Ahmed" }, { age: 25 });
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Basic generic function**
+**Kata 1 - Basic generic function**
 Write a generic function `wrapInArray<T>(value: T): T[]` that returns `[value]`.
 Test it with a string, a number, and an object.
 
-**Task 2 - Generic pair**
+**Kata 2 - Generic pair**
 Write a generic type `Pair<A, B> = { first: A; second: B }`.
 Write a function `swap<A, B>(pair: Pair<A, B>): Pair<B, A>` that swaps first and second.
 Test it with a `Pair<string, number>`.
 
-**Task 3 - Generic collection class**
+**Kata 3 - Generic collection class**
 Write a generic class `TypedList<T>` with:
 - Private `items: T[]`
 - `add(item: T): void`
@@ -156,13 +158,13 @@ Write a generic class `TypedList<T>` with:
 
 Test it with `TypedList<string>` and `TypedList<{ id: number; title: string }>`.
 
-**Task 4 - Constrained generic**
+**Kata 4 - Constrained generic**
 Write a function `getField<T, K extends keyof T>(obj: T, field: K): T[K]`.
 This is the classic "safe property access" pattern.
 Test it on a task object with different field names.
 Try passing an invalid field name and see the error.
 
-**Task 5 - Generic ApiResponse**
+**Kata 5 - Generic ApiResponse**
 Write a generic type `ApiResponse<T>` with:
 - `success: true; data: T` OR `success: false; error: string`
 (This is a discriminated union where one branch is generic.)
@@ -171,7 +173,7 @@ Write two helper functions:
 - `ok<T>(data: T): ApiResponse<T>` - returns success response
 - `fail(error: string): ApiResponse<never>` - returns error response
 
-**Task 6 - Generic repository**
+**Kata 6 - Generic repository**
 Write an interface `IRepository<T extends { id: number }>` with:
 - `findById(id: number): T | undefined`
 - `findAll(): T[]`
@@ -183,11 +185,11 @@ Test it by creating `new InMemoryRepository<{ id: number; title: string }>()`.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Generic useFetch hook (simulated)**
+**Kata 7 - Generic useFetch hook (simulated)**
 Write a generic function `createFetchState<T>()` that returns a `FetchState<T>` object:
 ```typescript
 type FetchState<T> = {
@@ -198,7 +200,7 @@ type FetchState<T> = {
 ```
 Call it as `createFetchState<{ id: number; title: string }[]>()`.
 
-**Task 8 - Generic list component helper**
+**Kata 8 - Generic list component helper**
 Write a generic function:
 `renderList<T>(items: T[], renderItem: (item: T, index: number) => string): string`
 It should call `renderItem` for each item and join the results with `\n`.
@@ -206,11 +208,11 @@ Test it with an array of tasks and an array of usernames.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - Generic service base class**
+**Kata 9 - Generic service base class**
 Write a generic abstract class `BaseService<T extends { id: number }>` with:
 - Protected `items: T[] = []`
 - `findAll(): T[]`
@@ -220,7 +222,7 @@ Write a generic abstract class `BaseService<T extends { id: number }>` with:
 
 Then write `TasksService extends BaseService<Task>` and implement `create`.
 
-**Task 10 - Generic paginate function**
+**Kata 10 - Generic paginate function**
 Write a generic function:
 `paginate<T>(items: T[], page: number, pageSize: number): { items: T[]; total: number; page: number; totalPages: number }`
 
@@ -228,10 +230,10 @@ Test it with an array of 20 tasks, page 2, pageSize 5.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
-Make ApiResponse generic (you previewed this in topic 04):
+Make ApiResponse generic (you previewed this in Scroll 04):
 
 ```typescript
 export type ApiSuccess<T> = {

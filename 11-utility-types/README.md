@@ -1,4 +1,6 @@
-# Topic 11 - Utility Types
+# Scroll 11 - Utility Types
+
+> *TypeScript's built-in tool belt. Open the drawer and pick a tool.*
 
 TypeScript ships with a set of built-in generic types that help you transform and work with
 existing types. You have already used a few (like `Partial` and `Omit` in previous topics).
@@ -124,23 +126,23 @@ type B = Awaited<Promise<Promise<number>>>;   // number
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Partial for update DTOs**
+**Kata 1 - Partial for update DTOs**
 Define a full `Task` interface. Then create:
 - `UpdateTaskDto = Partial<Omit<Task, "id" | "createdAt">>` (no id/timestamp on updates)
 - Write a function `updateTask(id: number, changes: UpdateTaskDto): Task`
   that merges the changes into a hardcoded base task.
 
-**Task 2 - Required for strict validation**
+**Kata 2 - Required for strict validation**
 Write a type `DraftTask` where all fields are optional (you are building it step by step).
 Then write a function `publishTask(draft: DraftTask): Required<DraftTask>` that:
 - Checks all fields are present (log an error if any is missing)
 - Returns the draft cast as `Required<DraftTask>`
 
-**Task 3 - Pick for different views**
+**Kata 3 - Pick for different views**
 Given a `User` interface with many fields, use `Pick` to create:
 - `UserProfile` - public fields: id, username, avatarUrl
 - `UserCredentials` - private fields: email, passwordHash
@@ -148,13 +150,13 @@ Given a `User` interface with many fields, use `Pick` to create:
 
 Then write a function for each view type.
 
-**Task 4 - Record for lookup tables**
+**Kata 4 - Record for lookup tables**
 Write a type `StatusLabel = Record<"todo" | "in_progress" | "done", string>`.
 Create a `statusLabels` object of that type with friendly labels.
 Write a function `getStatusLabel(status: "todo" | "in_progress" | "done"): string`
 that uses the record for lookup.
 
-**Task 5 - ReturnType and Parameters**
+**Kata 5 - ReturnType and Parameters**
 Define this function (do not change it):
 ```typescript
 function fetchTasksFromDb(userId: number, status: string, page: number): { tasks: any[]; total: number } {
@@ -166,38 +168,38 @@ Without looking at the function definition, extract:
 - The parameters type using `Parameters<typeof fetchTasksFromDb>`
 - The type of the second parameter
 
-**Task 6 - Awaited for async return types**
+**Kata 6 - Awaited for async return types**
 Write an async function `fetchUser(): Promise<{ id: number; username: string }>`.
 Use `Awaited<ReturnType<typeof fetchUser>>` to get the resolved type.
 This is useful when you need the "inner" type of an async function without calling it.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Form state with Partial**
+**Kata 7 - Form state with Partial**
 A form starts empty and fills up as the user types. Use `Partial<TaskFormData>` to type
 the in-progress form state. Write a function `isFormComplete(form: Partial<TaskFormData>): form is TaskFormData`
 that checks all required fields are present.
 
-**Task 8 - UI config with Record**
+**Kata 8 - UI config with Record**
 Write a `Record<"todo" | "in_progress" | "done", { label: string; color: string; icon: string }>`.
 Use it to build a `getStatusConfig` function that returns the UI config for a status.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - Endpoint response shaping with Pick**
+**Kata 9 - Endpoint response shaping with Pick**
 The full `Task` object has internal fields (like `passwordHash` for users).
 Write a `TaskRepository` class whose `findAll()` returns `Task[]` (full objects internally),
 but expose a `getPublicTask` function that returns `Pick<Task, "id" | "title" | "status">`.
 
-**Task 10 - Type-safe cache with Record**
+**Kata 10 - Type-safe cache with Record**
 Write a class `TaskCache` that uses `Record<number, Task>` as its internal store.
 Methods:
 - `set(task: Task): void`
@@ -207,7 +209,7 @@ Methods:
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Use utility types to derive everything cleanly:

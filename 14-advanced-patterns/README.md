@@ -1,4 +1,6 @@
-# Topic 14 - Advanced Patterns
+# Scroll 14 - Advanced Patterns
+
+> *Master moves only the senior ninjas have seen.*
 
 This topic covers patterns that separate good TypeScript from great TypeScript.
 These are the techniques you will recognize in mature codebases and in TypeScript's own source code.
@@ -146,11 +148,11 @@ user.touch();
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - satisfies**
+**Kata 1 - satisfies**
 Create a config object and use `satisfies` to validate it against a type without losing precision:
 
 ```typescript
@@ -164,18 +166,18 @@ type AppConfig = {
 Without `satisfies`, accessing `config.env` gives `"development" | "production" | "test"`.
 With `satisfies`, it gives the exact literal like `"development"`. Try both and compare.
 
-**Task 2 - as const**
+**Kata 2 - as const**
 Write an array of all task statuses as a `const` assertion.
 Then derive the `TaskStatus` union type from it using `typeof arr[number]`.
 This way you never have to write the union type manually.
 
-**Task 3 - Branded types**
+**Kata 3 - Branded types**
 Create branded types for `UserId`, `TaskId`, and `CommentId` (all are numbers underneath).
 Write `createUserId`, `createTaskId`, `createCommentId` factory functions.
 Write a function `assignTask(taskId: TaskId, userId: UserId): void`.
 Try calling it with a `CommentId` in place of a `TaskId` and see the error.
 
-**Task 4 - Recursive type**
+**Kata 4 - Recursive type**
 Write a type `TreeNode<T>` that represents a tree:
 ```typescript
 type TreeNode<T> = { value: T; children: TreeNode<T>[] };
@@ -183,14 +185,14 @@ type TreeNode<T> = { value: T; children: TreeNode<T>[] };
 Build a small task category tree using this type and write a function
 `printTree<T>(node: TreeNode<T>, depth: number = 0): void` that prints it with indentation.
 
-**Task 5 - JSON type**
+**Kata 5 - JSON type**
 Write the `JSONValue` recursive type. Then write:
 - `function parseConfig(json: string): JSONValue` that parses JSON safely
 - `function isObject(value: JSONValue): value is Record<string, JSONValue>` type guard
 - `function deepGet(obj: Record<string, JSONValue>, path: string[]): JSONValue | undefined`
   that navigates a nested path like `["user", "settings", "theme"]`
 
-**Task 6 - Mixin**
+**Kata 6 - Mixin**
 Write a `Serializable` mixin that adds:
 - `serialize(): string` - returns `JSON.stringify(this)`
 - `static deserialize<T>(json: string): T` - returns `JSON.parse(json)`
@@ -199,11 +201,11 @@ Apply it to a `Task` class. Test serializing and deserializing a task.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - satisfies for route config**
+**Kata 7 - satisfies for route config**
 Write a route config using `satisfies`:
 ```typescript
 type RouteConfig = Record<string, { path: string; title: string; requiresAuth: boolean }>;
@@ -211,18 +213,18 @@ type RouteConfig = Record<string, { path: string; title: string; requiresAuth: b
 Create the config and use `satisfies RouteConfig` to validate it.
 Then access a specific route's `path` and notice TypeScript knows the exact string.
 
-**Task 8 - Branded types for DOM ids**
+**Kata 8 - Branded types for DOM ids**
 Create branded types `TaskElementId` and `UserElementId` (both are strings).
 Write a function `getElementById<T extends string>(id: T): HTMLElement | null` where the id
 must match a branded type. This prevents passing a wrong id to the wrong function.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - Builder pattern with TypeScript**
+**Kata 9 - Builder pattern with TypeScript**
 Write a type-safe builder for task queries:
 
 ```typescript
@@ -236,7 +238,7 @@ class TaskQueryBuilder {
 }
 ```
 
-**Task 10 - Environment config with satisfies**
+**Kata 10 - Environment config with satisfies**
 Write an environment config that uses `satisfies` to validate it:
 ```typescript
 type Env = {
@@ -250,7 +252,7 @@ This pattern is used to validate `process.env` in real NestJS apps.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared - Use branded types for IDs:**
 

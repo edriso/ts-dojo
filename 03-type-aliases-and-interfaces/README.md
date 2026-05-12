@@ -1,4 +1,6 @@
-# Topic 03 - Type Aliases and Interfaces
+# Scroll 03 - Type Aliases and Interfaces
+
+> *Two stances, one goal: give your objects a shape.*
 
 When you write TypeScript, you will constantly need to describe the shape of objects.
 Both `type` and `interface` let you do this, and they are very similar. This topic covers
@@ -99,11 +101,11 @@ This is how `@types` packages add types to libraries.
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Your first interface**
+**Kata 1 - Your first interface**
 Define an interface called `Task` with:
 - `id`: number
 - `title`: string
@@ -113,7 +115,7 @@ Define an interface called `Task` with:
 
 Create two objects that match this interface and log them.
 
-**Task 2 - Your first type alias**
+**Kata 2 - Your first type alias**
 Define a type alias called `ApiResponse` with:
 - `success`: boolean
 - `message`: string
@@ -121,27 +123,27 @@ Define a type alias called `ApiResponse` with:
 
 Create one object matching this type and log it.
 
-**Task 3 - Extending an interface**
+**Kata 3 - Extending an interface**
 Create an interface `BaseEntity` with `id: number` and `createdAt: string`.
 Then create interfaces `Task` and `User` that both extend `BaseEntity`.
 Add relevant fields to each. This is a pattern you will use constantly.
 
-**Task 4 - Extending a type alias**
-Do the same as Task 3 but using `type` aliases and the `&` intersection operator.
+**Kata 4 - Extending a type alias**
+Do the same as Kata 3 but using `type` aliases and the `&` intersection operator.
 See how the syntax differs.
 
-**Task 5 - Interface vs type with unions**
+**Kata 5 - Interface vs type with unions**
 Try to write a type alias that is `string | number` (a union).
 Now try to do the same with `interface`. Notice that `interface` cannot do this.
 This is one reason `type` exists.
 
-**Task 6 - implements in a class (preview)**
+**Kata 6 - implements in a class (preview)**
 Define an interface `Printable` with a method `print(): void`.
 Then write a class `TaskDocument` that `implements Printable`.
 Inside the `print` method, just log the class name.
-We cover classes properly in topic 07, but try this now.
+We cover classes properly in Scroll 07, but try this now.
 
-**Task 7 - Declaration merging**
+**Kata 7 - Declaration merging**
 Declare an interface `Config` twice:
 - First: `{ port: number }`
 - Second: `{ host: string }`
@@ -151,11 +153,11 @@ Try the same with `type` and see the error.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 8 - Define component prop types**
+**Kata 8 - Define component prop types**
 In React, you define component props with TypeScript interfaces (or types). Write
 an interface called `TaskCardProps` with:
 - `taskId`: number
@@ -167,21 +169,21 @@ Then write an interface `TaskListProps` with:
 - `tasks`: array of `TaskCardProps`
 - `onSelect`: a function that takes a taskId (number) and returns void (function type syntax: `(taskId: number) => void`)
 
-**Task 9 - Reusable response type**
+**Kata 9 - Reusable response type**
 Write a generic-looking (non-generic for now) type alias `FetchState` with:
 - `loading`: boolean
 - `error`: string | null
 - `data`: unknown
 
-We will make this generic in topic 09. For now, `unknown` is fine.
+We will make this generic in Scroll 09. For now, `unknown` is fine.
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 10 - DTO interface**
+**Kata 10 - DTO interface**
 In NestJS, DTOs (Data Transfer Objects) describe the shape of request bodies.
 Write an interface `CreateTaskDto` with:
 - `title`: string
@@ -190,7 +192,7 @@ Write an interface `CreateTaskDto` with:
 
 Write another interface `UpdateTaskDto` with all fields optional.
 
-**Task 11 - Service interface**
+**Kata 11 - Service interface**
 Write an interface `TaskService` that describes what a task service can do:
 - `findAll(): Task[]` (returns an array of Task)
 - `findById(id: number): Task | undefined`
@@ -201,7 +203,7 @@ You do not need to implement it yet. Just define the interface.
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Replace the simple types you wrote before with proper interfaces using `extends`:

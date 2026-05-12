@@ -1,10 +1,10 @@
-// Topic 06 - Enums
-// Frontend (React + TypeScript) Exercises
+// Scroll 06 - Enums
+// Frontend dojo · React + TypeScript katas
 
 // ------------------------------------------------------------------
-// Task 7 - Enum for filter state
+// Kata 7 - Enum for filter state
 // ------------------------------------------------------------------
-// TODO: Create a string enum FilterOption:
+// Your mission: Create a string enum FilterOption:
 //   All = "all"
 //   Active = "todo"
 //   InProgress = "in_progress"
@@ -20,13 +20,13 @@
 //
 // Test it with a fake array of 5 tasks with mixed statuses.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Modal state enum
+// Kata 8 - Modal state enum
 // ------------------------------------------------------------------
-// TODO: Create a string enum ModalState:
+// Your mission: Create a string enum ModalState:
 //   Closed = "closed"
 //   CreateTask = "create"
 //   EditTask = "edit"
@@ -42,4 +42,4 @@
 //
 // Call openModal(ModalState.CreateTask) then closeModal()
 
-// Write your solution here:
+// Train your code here, ninja:

@@ -1,4 +1,6 @@
-# Topic 04 - Unions, Intersections, and Literal Types
+# Scroll 04 - Unions, Intersections, and Literal Types
+
+> *Mix, match, and lock down your moves with sharp precision.*
 
 Unions let a value be one of several types. Intersections combine multiple types into one.
 Literal types let you say "this value must be exactly this specific string or number."
@@ -90,22 +92,22 @@ This eliminates a huge amount of runtime errors.
 
 ---
 
-## Tasks
+## Katas
 
-### Shared Tasks
+### Shared Katas
 
-**Task 1 - Union with primitives**
+**Kata 1 - Union with primitives**
 Write a function `formatId` that takes a parameter `id: string | number`.
 Inside, if the id is a number, multiply it by 100 and return the result as a string.
 If it is already a string, return it as-is.
 Hint: use `typeof id === "number"` to check.
 
-**Task 2 - Literal types**
+**Kata 2 - Literal types**
 Define a type `TaskStatus` as a union of exactly three string literals: `"todo"`, `"in_progress"`, `"done"`.
 Define a type `Priority` as a union of: `"low"`, `"medium"`, `"high"`.
 Write a function `getStatusLabel(status: TaskStatus): string` that returns a human-readable string for each status.
 
-**Task 3 - Intersection types**
+**Kata 3 - Intersection types**
 Create two types:
 - `WithTimestamps`: `{ createdAt: string; updatedAt: string }`
 - `WithSoftDelete`: `{ deletedAt: string | null; isDeleted: boolean }`
@@ -113,7 +115,7 @@ Create two types:
 Then create a type `AuditableTask` that is an intersection of a basic `Task` type (id, title) and both of the above.
 Create an object of type `AuditableTask`.
 
-**Task 4 - Discriminated union**
+**Kata 4 - Discriminated union**
 Write a discriminated union for the result of saving a task:
 - `SaveSuccess`: `{ type: "success"; savedTask: { id: number; title: string } }`
 - `SaveError`: `{ type: "error"; errorCode: number; message: string }`
@@ -122,13 +124,13 @@ Write a discriminated union for the result of saving a task:
 Then write a function `handleSaveResult` that takes `SaveSuccess | SaveError | SaveValidationError`
 and logs a different message for each case. Use the `type` field as the discriminant.
 
-**Task 5 - Union in function return**
+**Kata 5 - Union in function return**
 Write a function `findTask(id: number): { id: number; title: string } | null`.
 If the id is 1, return a fake task object. Otherwise return null.
 Then call it twice and handle both cases (check for null before accessing `.title`).
 
-**Task 6 - Exhaustiveness check**
-Take the `handleSaveResult` function from Task 4 and add a fourth case at the end:
+**Kata 6 - Exhaustiveness check**
+Take the `handleSaveResult` function from Kata 4 and add a fourth case at the end:
 ```typescript
 default:
   const _exhaustive: never = result;  // will error if you add a new type and forget this
@@ -138,11 +140,11 @@ and forget to handle it here, TypeScript will give you an error.
 
 ---
 
-### Frontend Tasks
+### Frontend Katas
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Component state union**
+**Kata 7 - Component state union**
 In a frontend app, a page can be in different states. Write a discriminated union for a task detail page:
 - `LoadingState`: `{ state: "loading" }`
 - `SuccessState`: `{ state: "success"; task: { id: number; title: string; status: string } }`
@@ -150,7 +152,7 @@ In a frontend app, a page can be in different states. Write a discriminated unio
 
 Then write a function `renderPage` that takes one of these states and logs what should be shown.
 
-**Task 8 - Event type union**
+**Kata 8 - Event type union**
 Write a union type `TaskAction` for things a user can do:
 - `{ type: "create"; title: string }`
 - `{ type: "delete"; taskId: number }`
@@ -160,11 +162,11 @@ Write a function `dispatchAction(action: TaskAction): void` that handles each ac
 
 ---
 
-### Backend Tasks
+### Backend Katas
 
 Open `server/exercise.ts` and complete the TODOs.
 
-**Task 9 - API response discriminated union**
+**Kata 9 - API response discriminated union**
 Write a discriminated union for all API responses your backend can send:
 - `SuccessResponse<T>`: skip the generic for now, use `{ success: true; data: unknown }`
 - `ErrorResponse`: `{ success: false; statusCode: number; message: string }`
@@ -172,14 +174,14 @@ Write a discriminated union for all API responses your backend can send:
 Write a helper function `ok(data: unknown)` that returns a `SuccessResponse`
 and `fail(statusCode: number, message: string)` that returns an `ErrorResponse`.
 
-**Task 10 - Role-based access**
+**Kata 10 - Role-based access**
 Write a union type `UserRole = "admin" | "editor" | "viewer"`.
 Write a function `canDeleteTask(role: UserRole): boolean` that returns true only for "admin".
 Write a function `canEditTask(role: UserRole): boolean` that returns true for "admin" and "editor".
 
 ---
 
-## Apply to the Project
+## Bring it to the Project
 
 **Shared types (`project/shared/index.ts`):**
 Replace the simple string types with proper discriminated unions and literals:

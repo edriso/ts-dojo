@@ -1,5 +1,5 @@
-// Topic 11 - Utility Types
-// Frontend (React + TypeScript) Exercises
+// Scroll 11 - Utility Types
+// Frontend dojo · React + TypeScript katas
 
 type TaskFormData = {
   title: string;
@@ -10,9 +10,9 @@ type TaskFormData = {
 };
 
 // ------------------------------------------------------------------
-// Task 7 - Form state with Partial
+// Kata 7 - Form state with Partial
 // ------------------------------------------------------------------
-// TODO: A form fills up as the user types, so the data is partial at first.
+// Your mission: A form fills up as the user types, so the data is partial at first.
 //
 // 1. Declare a variable draftTask: Partial<TaskFormData> = {}
 //
@@ -26,13 +26,13 @@ type TaskFormData = {
 //    draftTask.priority = "high"
 //    Then call isFormComplete(draftTask) and log the result.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Status UI config with Record
+// Kata 8 - Status UI config with Record
 // ------------------------------------------------------------------
-// TODO: Write this type:
+// Your mission: Write this type:
 //   type StatusConfig = Record<
 //     "todo" | "in_progress" | "done",
 //     { label: string; color: string; icon: string }
@@ -48,13 +48,13 @@ type TaskFormData = {
 //
 // Test it with all three statuses.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Readonly state
 // ------------------------------------------------------------------
-// TODO: Declare:
+// Your mission: Declare:
 //   const frozenTask: Readonly<TaskFormData> = {
 //     title: "Cannot change this",
 //     description: "It is frozen",
@@ -66,4 +66,4 @@ type TaskFormData = {
 // Try to change frozenTask.title and observe the error.
 // This is useful for component props you want to treat as immutable.
 
-// Write your solution here:
+// Train your code here, ninja:

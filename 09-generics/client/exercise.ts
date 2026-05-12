@@ -1,10 +1,10 @@
-// Topic 09 - Generics
-// Frontend (React + TypeScript) Exercises
+// Scroll 09 - Generics
+// Frontend dojo · React + TypeScript katas
 
 // ------------------------------------------------------------------
-// Task 7 - Generic FetchState
+// Kata 7 - Generic FetchState
 // ------------------------------------------------------------------
-// TODO: Define this generic type:
+// Your mission: Define this generic type:
 //   type FetchState<T> = {
 //     loading: boolean;
 //     data: T | null;
@@ -20,13 +20,13 @@
 //
 // Log both and check their types in VS Code by hovering.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Generic list renderer
+// Kata 8 - Generic list renderer
 // ------------------------------------------------------------------
-// TODO: Write a generic function:
+// Your mission: Write a generic function:
 //   renderList<T>(
 //     items: T[],
 //     renderItem: (item: T, index: number) => string
@@ -43,13 +43,13 @@
 //
 // Log both results.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Generic state machine
 // ------------------------------------------------------------------
-// TODO: Write a generic type:
+// Your mission: Write a generic type:
 //   type AsyncState<T> =
 //     | { status: "idle" }
 //     | { status: "loading" }
@@ -62,4 +62,4 @@
 //
 // Test with AsyncState<string[]> in different states.
 
-// Write your solution here:
+// Train your code here, ninja:

@@ -1,10 +1,10 @@
-// Topic 08 - Narrowing and Type Guards
-// Frontend (React + TypeScript) Exercises
+// Scroll 08 - Narrowing and Type Guards
+// Frontend dojo · React + TypeScript katas
 
 // ------------------------------------------------------------------
-// Task 7 - Narrowing in component rendering
+// Kata 7 - Narrowing in component rendering
 // ------------------------------------------------------------------
-// TODO: Write a function:
+// Your mission: Write a function:
 //   renderTaskItem(item: { id: number; title: string } | string | null): string
 //
 // Rules:
@@ -14,13 +14,13 @@
 //
 // Test it with all three cases.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
-// Task 8 - Type guard for API login response
+// Kata 8 - Type guard for API login response
 // ------------------------------------------------------------------
-// TODO: Write a type guard:
+// Your mission: Write a type guard:
 //   isUserObject(data: unknown): data is { id: number; username: string; email: string }
 //
 // It should return true only if:
@@ -35,13 +35,13 @@
 //
 // Test with a valid user object and with a string to see both paths.
 
-// Write your solution here:
+// Train your code here, ninja:
 
 
 // ------------------------------------------------------------------
 // Bonus - Narrowing with optional chaining
 // ------------------------------------------------------------------
-// TODO: Write a type:
+// Your mission: Write a type:
 //   type PageState =
 //     | { status: "loading" }
 //     | { status: "success"; user: { id: number; username: string } }
@@ -52,4 +52,4 @@
 //
 // Do NOT use "as" type casting. Use a proper if check.
 
-// Write your solution here:
+// Train your code here, ninja:

@@ -1,14 +1,14 @@
-// Topic 12 - Modules and Declarations
-// Frontend (React + TypeScript) Exercises
+// Scroll 12 - Modules and Declarations
+// Frontend dojo · React + TypeScript katas
 //
 // Most tasks in this topic involve creating multiple files.
 // Follow the instructions in the README and create the files
 // described there alongside this exercise file.
 
 // ------------------------------------------------------------------
-// Task 6 - Organize types into modules
+// Kata 6 - Organize types into modules
 // ------------------------------------------------------------------
-// TODO: Create the following files in a new client/types/ folder:
+// Your mission: Create the following files in a new client/types/ folder:
 //
 // client/types/props.types.ts - export these types:
 //   TaskCardProps { taskId: number; title: string; status: string; isComplete: boolean }
@@ -29,9 +29,9 @@
 
 
 // ------------------------------------------------------------------
-// Task 7 - Augment the Window type
+// Kata 7 - Augment the Window type
 // ------------------------------------------------------------------
-// TODO: Create a file client/types/globals.d.ts with this content:
+// Your mission: Create a file client/types/globals.d.ts with this content:
 //
 //   declare global {
 //     interface Window {
@@ -52,7 +52,7 @@
 // ------------------------------------------------------------------
 // Bonus - import type
 // ------------------------------------------------------------------
-// TODO: Look at your imports in this file and in previous exercise files.
+// Your mission: Look at your imports in this file and in previous exercise files.
 // Find any place you import a type that is only used as a type annotation
 // (not called as a function, not used as a value).
 // Change those imports to: import type { ... }
