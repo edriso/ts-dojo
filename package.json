@@ -1,0 +1,16 @@
+{
+  "name": "ts-dojo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hands-on TypeScript curriculum: 15 topics + a shared React + NestJS Task Manager project.",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "run:exercise": "ts-node",
+    "topic": "ts-node"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
