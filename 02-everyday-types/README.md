@@ -160,7 +160,7 @@ and understand that its job is to catch code paths that should be impossible.
 Open `client/exercise.ts` and complete the TODOs.
 
 **Task 8 - Component state types**
-In Vue/React, component state is just typed variables. Write the following:
+In React, component state is just typed variables (often held in `useState`). Write the following:
 - A `currentUser` variable: can be a string (username) or null (not logged in)
 - A `taskList` variable: an array of strings (task titles, empty for now)
 - A `loadingState` variable: can only be `"idle"`, `"loading"`, or `"error"` (use a union - we cover this more in topic 4, but try it now)

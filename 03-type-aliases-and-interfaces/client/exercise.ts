@@ -1,5 +1,5 @@
 // Topic 03 - Type Aliases and Interfaces
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 8 - Define component prop types

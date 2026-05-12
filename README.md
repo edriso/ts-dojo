@@ -2,7 +2,7 @@
 
 Welcome! This is a hands-on learning repo for two friends learning TypeScript together.
 
-One of you is building the **frontend** using Vue 3 (or React) with TypeScript.
+One of you is building the **frontend** using React with TypeScript.
 The other is building the **backend** using NestJS with TypeScript.
 
 You will learn every important TypeScript concept by doing real tasks, and you will apply each concept directly to a shared project: a **Task Manager app**.
@@ -26,7 +26,7 @@ This project grows with you. After each topic, there is a section called "Apply 
 
 | Side | Technology |
 |------|-----------|
-| Frontend | Vue 3 + TypeScript (or React + TypeScript) |
+| Frontend | React 18 + Vite + TypeScript |
 | Backend | NestJS + TypeScript |
 | Shared Types | Plain TypeScript files imported by both sides |
 
@@ -56,7 +56,7 @@ ts-ninja/
   14-advanced-patterns/
   15-config-and-tooling/
   project/
-    client/                     <- Vue 3 + TS app
+    client/                     <- React + TS app (Vite)
     server/                     <- NestJS app
     shared/                     <- types used by both sides
 ```
@@ -93,7 +93,7 @@ Work through the topics in order. Each topic builds on the previous one.
 2. Read the `README.md` in that folder
 3. Open the `client/exercise.ts` or `server/exercise.ts` file
 4. Complete the TODO items in the file
-5. Run your code with `npx ts-node exercise.ts` or compile with `npx tsc`
+5. Run your code with `npx ts-node <path>/exercise.ts`, or type-check the repo with `npm run type-check`
 6. Once you finish all tasks, go to the "Apply to the Project" section in the README
 7. Build that feature in the `project/` folder
 
@@ -105,17 +105,34 @@ Work through the topics in order. Each topic builds on the previous one.
 - Node.js installed (v18 or later recommended)
 - A code editor (VS Code is highly recommended for TypeScript)
 
-### Install TypeScript globally
+### Install TypeScript locally (recommended)
+
+From the repo root:
 
 ```bash
-npm install -g typescript ts-node
+npm install
 ```
+
+This pulls in `typescript`, `ts-node`, and `@types/node` as dev dependencies so
+every exercise file is runnable without touching your global Node setup.
 
 ### Check it works
 
 ```bash
-tsc --version
-ts-node --version
+npx tsc --version
+npx ts-node --version
+```
+
+### Run a single exercise
+
+```bash
+npx ts-node 02-everyday-types/client/exercise.ts
+```
+
+### Type-check everything in the repo
+
+```bash
+npm run type-check
 ```
 
 ---

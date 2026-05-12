@@ -1,5 +1,5 @@
 // Topic 04 - Unions, Intersections, and Literal Types
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - Component state union (discriminated union)

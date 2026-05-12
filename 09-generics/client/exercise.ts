@@ -1,5 +1,5 @@
 // Topic 09 - Generics
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - Generic FetchState

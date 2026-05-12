@@ -1,8 +1,9 @@
 # Task Manager Project
 
 This is the shared project you build together as you progress through the topics.
-One person builds the frontend (Vue 3 or React + TypeScript), the other builds
-the backend (NestJS + TypeScript). You share types through the `shared/` folder.
+One person builds the frontend (React + TypeScript, scaffolded with Vite), the
+other builds the backend (NestJS + TypeScript). You share types through the
+`shared/` folder.
 
 ---
 
@@ -12,7 +13,7 @@ the backend (NestJS + TypeScript). You share types through the `shared/` folder.
 project/
   shared/         <- TypeScript types used by both frontend and backend
     index.ts
-  client/         <- Frontend (Vue 3 or React + TypeScript)
+  client/         <- Frontend (React + Vite + TypeScript)
     README.md     <- Setup instructions
   server/         <- Backend (NestJS + TypeScript)
     README.md     <- Setup instructions
@@ -32,18 +33,16 @@ nest new .
 
 ### Step 2 - Set up the frontend (you do this)
 
-**Vue 3:**
-```bash
-cd project/client
-npm create vue@latest .
-# Select: TypeScript - Yes, Vue Router - Yes, Pinia - Yes
-```
-
-**React:**
 ```bash
 cd project/client
 npm create vite@latest . -- --template react-ts
+npm install
+# Recommended extras:
+npm install react-router-dom zustand
 ```
+
+- `react-router-dom` — routing
+- `zustand` — small, typed state store
 
 ### Step 3 - Install shared types
 
@@ -80,7 +79,7 @@ Work through these features as you progress through the topics.
 
 ### After Topic 2 (Everyday Types)
 - [ ] Backend: Basic NestJS setup running on port 3000
-- [ ] Frontend: Vue/React app running with TypeScript
+- [ ] Frontend: React app running with TypeScript
 - [ ] Shared: Basic Task and User interfaces in shared/index.ts
 
 ### After Topic 5 (Functions)
@@ -100,7 +99,7 @@ Work through these features as you progress through the topics.
 ### After Topic 9 (Generics)
 - [ ] Backend: Generic ApiResponse<T> wrapper on all endpoints
 - [ ] Backend: Pagination with PaginatedResponse<T>
-- [ ] Frontend: Generic useFetch / useApi composable (Vue) or hook (React)
+- [ ] Frontend: Generic `useApi<T>` hook (loading / data / error states)
 
 ### After Topic 11 (Utility Types)
 - [ ] Backend: PUT /tasks/:id - updates a task using Partial<Task> for the body

@@ -177,8 +177,8 @@ Test it by filtering for incomplete tasks and for tasks with long titles.
 Open `client/exercise.ts` and complete the TODOs.
 
 **Task 7 - Event handler types**
-In Vue/React, event handlers are functions. Write typed handlers:
-- `handleSubmit(event: Event): void`
+In React, event handlers are functions. Write typed handlers:
+- `handleSubmit(event: React.FormEvent): void`
 - `handleTaskClick(taskId: number): void`
 - `handleSearch(query: string, filters?: string[]): void`
 
@@ -226,7 +226,7 @@ export type GetTasksFn = (userId: number, status?: TaskStatus) => Promise<Task[]
 export type DeleteTaskFn = (taskId: number) => Promise<void>;
 ```
 
-**Frontend:** Write typed event handler functions in your Vue/React component.
+**Frontend:** Write typed event handler functions in your React components.
 `handleCreateTask`, `handleDeleteTask`, `handleStatusChange` - all with proper parameter types.
 
 **Backend:** Add proper return type annotations to all your NestJS service methods.

@@ -1,8 +1,8 @@
 // Topic 07 - Objects and Classes
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
-// Task 7 - Store-like class (Pinia preview)
+// Task 7 - Store-like class (Zustand preview)
 // ------------------------------------------------------------------
 // TODO: Write a class TaskStore that acts like a simple state store.
 //

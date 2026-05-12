@@ -1,5 +1,5 @@
 // Topic 05 - Functions
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - Event handler types

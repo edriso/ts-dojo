@@ -1,5 +1,5 @@
 // Topic 14 - Advanced Patterns
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - satisfies for route config

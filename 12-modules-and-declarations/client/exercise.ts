@@ -1,5 +1,5 @@
 // Topic 12 - Modules and Declarations
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 //
 // Most tasks in this topic involve creating multiple files.
 // Follow the instructions in the README and create the files

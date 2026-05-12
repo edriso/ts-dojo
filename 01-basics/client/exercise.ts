@@ -1,5 +1,5 @@
 // Topic 01 - Basics and Setup
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 //
 // Run this file with: npx ts-node exercise.ts
 // Or compile with:   npx tsc exercise.ts && node exercise.js

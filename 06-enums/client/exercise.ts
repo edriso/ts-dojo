@@ -1,5 +1,5 @@
 // Topic 06 - Enums
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - Enum for filter state

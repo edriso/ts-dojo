@@ -156,8 +156,8 @@ Try the same with `type` and see the error.
 Open `client/exercise.ts` and complete the TODOs.
 
 **Task 8 - Define component prop types**
-In Vue 3, you can define props with TypeScript interfaces. Write an interface called
-`TaskCardProps` with:
+In React, you define component props with TypeScript interfaces (or types). Write
+an interface called `TaskCardProps` with:
 - `taskId`: number
 - `title`: string
 - `status`: string

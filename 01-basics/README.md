@@ -97,7 +97,7 @@ Notice that TypeScript removed all the type annotations. Then run `ts-node hello
 
 ---
 
-### Frontend Tasks (Vue 3 or React)
+### Frontend Tasks (React)
 
 Open `client/exercise.ts` and complete the TODOs inside.
 
@@ -142,8 +142,9 @@ nest new .
 **Frontend (you do this):**
 ```bash
 cd project/client
-npm create vue@latest .
-# Choose: TypeScript - Yes, Vue Router - Yes, Pinia - Yes
+npm create vite@latest . -- --template react-ts
+npm install
+npm install react-router-dom zustand
 ```
 
 **Shared types (do this together):**

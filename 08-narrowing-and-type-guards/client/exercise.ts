@@ -1,5 +1,5 @@
 // Topic 08 - Narrowing and Type Guards
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - Narrowing in component rendering

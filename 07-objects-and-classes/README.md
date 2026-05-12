@@ -2,7 +2,7 @@
 
 Objects are the basic building blocks of most TypeScript apps. Classes add structure and behavior
 to those objects using object-oriented programming. NestJS is entirely built around classes,
-and even in Vue/React you will use classes for things like service layers and state management.
+and even in React you will use classes for things like service layers, error boundaries, and structured state management.
 
 ---
 
@@ -259,7 +259,7 @@ Make the `Task` class from Task 2 implement `Exportable` by adding a `toJSON` me
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Store-like class (Pinia/Vuex preview)**
+**Task 7 - Store-like class (Zustand/Redux preview)**
 Write a class `TaskStore` that simulates a simple state store:
 - Private `tasks: { id: number; title: string; status: string }[]` (empty array)
 - Public `addTask(title: string): void`
@@ -267,11 +267,14 @@ Write a class `TaskStore` that simulates a simple state store:
 - Public `getTasks(): { id: number; title: string; status: string }[]`
 - Static `getInstance(): TaskStore` (singleton pattern - only one instance exists)
 
-**Task 8 - Component class (optional)**
-If you are using React with class components (rarely done now but good to know):
-Write a class `TaskListComponent` with:
-- Public `state: { tasks: string[]; loading: boolean }`
-- A `render(): string` method that returns a formatted task list string
+**Task 8 - React error boundary class (optional)**
+Modern React is mostly hooks-based, but **error boundaries** are still written
+as classes. Write a class `TaskListErrorBoundary` (no React imports needed for
+this exercise — just simulate the shape):
+- Public `state: { hasError: boolean; message: string | null }`
+- A static `getDerivedStateFromError(error: Error): { hasError: boolean; message: string }`
+- A `componentDidCatch(error: Error): void` method that logs the error
+- A `render(): string` method that returns either the fallback text or "children rendered"
 
 ---
 
@@ -338,7 +341,7 @@ export class TasksService {
 }
 ```
 
-**Frontend:** If using Pinia (Vue) or Zustand (React), write your first store with typed state.
+**Frontend:** Set up your first Zustand store with typed state (e.g. `useTaskStore` holding `tasks: Task[]` plus `addTask` / `removeTask` actions).
 
 ---
 

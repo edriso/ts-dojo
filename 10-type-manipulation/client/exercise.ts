@@ -1,5 +1,5 @@
 // Topic 10 - Type Manipulation
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 7 - Component prop extractor with indexed access

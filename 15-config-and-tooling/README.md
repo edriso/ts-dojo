@@ -191,7 +191,7 @@ By the time you finish this topic, your project should be complete.
 - [ ] ESLint passing with no errors
 
 **Frontend (project/client):**
-- [ ] Vue 3 or React app fetching and displaying tasks
+- [ ] React app fetching and displaying tasks
 - [ ] Task creation form
 - [ ] Edit and delete tasks
 - [ ] Filter tasks by status
@@ -208,7 +208,7 @@ By the time you finish this topic, your project should be complete.
 **Capstone challenges (optional but strongly recommended):**
 1. Add user authentication with JWT
 2. Use class-validator decorators for NestJS input validation
-3. Write a generic composable/hook that handles loading, error, and data states
+3. Write a generic `useApi<T>` hook that handles loading, error, and data states
 4. Add at least one use of conditional types or mapped types to derive types automatically
 5. Set up project references so `tsc --build` compiles everything in one command
 
@@ -224,7 +224,7 @@ a TypeScript ninja. The key concepts you now know:
 - Advanced type manipulation (mapped types, conditional types, template literals)
 - Real-world patterns (discriminated unions, branded types, builder pattern)
 - The full toolchain (tsconfig, ESLint, project references)
-- Framework integration (NestJS decorators, Vue/React with TypeScript)
+- Framework integration (NestJS decorators, React with TypeScript)
 
 Keep practicing. The best way to get better is to write TypeScript every day.
 

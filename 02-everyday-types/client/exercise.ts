@@ -1,5 +1,5 @@
 // Topic 02 - Everyday Types
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 // ------------------------------------------------------------------
 // Task 8 - Component state types

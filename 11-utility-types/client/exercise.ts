@@ -1,5 +1,5 @@
 // Topic 11 - Utility Types
-// Frontend (Vue 3 / React) Exercises
+// Frontend (React + TypeScript) Exercises
 
 type TaskFormData = {
   title: string;

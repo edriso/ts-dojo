@@ -190,7 +190,7 @@ Note: you may need `ts-node -r tsconfig-paths/register` to run files with path a
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 6 - Organize Vue/React types**
+**Task 6 - Organize React app types**
 Create these files:
 - `client/types/props.types.ts` - all component prop types
 - `client/types/state.types.ts` - all state/store types

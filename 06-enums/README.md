@@ -221,7 +221,7 @@ export enum Priority {
 }
 ```
 
-**Frontend:** Use `TaskStatus.Todo`, `TaskStatus.Done`, etc. in your Vue/React components.
+**Frontend:** Use `TaskStatus.Todo`, `TaskStatus.Done`, etc. in your React components.
 Update your filter logic to use the `TaskStatus` enum.
 
 **Backend:** Use these enums in your NestJS services. NestJS also integrates enums into

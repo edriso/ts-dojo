@@ -194,7 +194,7 @@ that `getStatusIcon` needs to handle it.
 
 Open `client/exercise.ts` and complete the TODOs.
 
-**Task 7 - Narrowing in Vue/React component**
+**Task 7 - Narrowing in a React component**
 Write a function `renderTaskItem(item: { id: number; title: string } | string | null): string`.
 - If it is null, return "Nothing to show"
 - If it is a string, return "Label: " + item
